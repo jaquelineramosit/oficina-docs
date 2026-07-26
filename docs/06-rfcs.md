@@ -118,8 +118,7 @@ Status: Aceita como arquitetura alvo
 
 ### Contexto
 
-O servico de Ordens possui pagamento mock no projeto base, mas a API de
-Pagamento real foi separada em repositorios proprios. Ela precisa integrar a
+O serviço de pagamentos será acionado via fila SQS. Ela integra a
 saga sem acoplar Ordens ao Mercado Pago.
 
 ### Proposta
@@ -127,11 +126,9 @@ saga sem acoplar Ordens ao Mercado Pago.
 Usar um participante serverless de Pagamento:
 
 - Ordens publica solicitacao em `sqs-pagamento-solicitar`.
-- Lambda `oficina-pagamento` valida o payload e cria a order Pix no Mercado
-  Pago.
+- Lambda `oficina-pagamento` valida o payload e cria a order Pix no Mercado Pago.
 - A order e persistida no DynamoDB `orders`.
-- A Lambda publica resultado em `sqs-pagamento-efetuado` ou
-  `sqs-pagamento-recusado`.
+- A Lambda publica resultado em `sqs-pagamento-efetuado` ou `sqs-pagamento-recusado`.
 - EventBridge aciona polling periodico para consultar orders pendentes.
 
 ### Contrato da solicitacao
