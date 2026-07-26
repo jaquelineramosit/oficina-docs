@@ -856,19 +856,7 @@ eventual, retentativas e reentrega de mensagens.</p>
     Ordens-&gt;&gt;OrdensDb: Inbox + saga Concluida + OS EmExecucao
     Ordens--&gt;&gt;Cliente: Status observavel atualizado</code></pre>
 <h2 id="estados">Estados<a class="headerlink" href="#estados" title="Permanent link">&para;</a></h2>
-<pre class="mermaid"><code>stateDiagram-v2
-    [*] --&gt; NaoIniciada
-    NaoIniciada --&gt; PagamentoPendente: Orcamento aprovado
-    PagamentoPendente --&gt; PagamentoPendente: Order Pix criada / QR disponivel
-    PagamentoPendente --&gt; PagamentoAprovado: Mercado Pago processed
-    PagamentoPendente --&gt; PagamentoRecusado: Gateway recusou ou Pix expirou
-    PagamentoAprovado --&gt; ReservaPendente: Outbox ReservarEstoque
-    ReservaPendente --&gt; Reservada: EstoqueReservado
-    Reservada --&gt; Concluida: OS entra em execucao
-    ReservaPendente --&gt; ReservaRecusada: ReservaEstoqueRecusada
-    ReservaRecusada --&gt; CompensacaoPendente: compensar pagamento ou tratar manualmente
-    CompensacaoPendente --&gt; Compensada: compensacao concluida
-    CompensacaoPendente --&gt; CompensacaoFalhou: erro de compensacao</code></pre>
+<p><img alt="Máquina de estados" src="../assets/maq%20estado.png" /></p>
 <p>Observacao: a mensagem <code>status: efetuado</code> representa "cobranca Pix criada",
 nao "pagamento confirmado". A saga deve continuar aguardando ate o polling
 identificar a order do Mercado Pago com status <code>processed</code> e a Lambda publicar
