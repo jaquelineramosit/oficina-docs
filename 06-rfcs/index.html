@@ -1499,18 +1499,15 @@ transacao distribuida entre bancos.</p>
 <h2 id="rfc-005-integracao-com-pagamento-pix">RFC-005 - Integracao com Pagamento Pix<a class="headerlink" href="#rfc-005-integracao-com-pagamento-pix" title="Permanent link">&para;</a></h2>
 <p>Status: Aceita como arquitetura alvo</p>
 <h3 id="contexto_4">Contexto<a class="headerlink" href="#contexto_4" title="Permanent link">&para;</a></h3>
-<p>O servico de Ordens possui pagamento mock no projeto base, mas a API de
-Pagamento real foi separada em repositorios proprios. Ela precisa integrar a
+<p>O serviço de pagamentos será acionado via fila SQS. Ela integra a
 saga sem acoplar Ordens ao Mercado Pago.</p>
 <h3 id="proposta_4">Proposta<a class="headerlink" href="#proposta_4" title="Permanent link">&para;</a></h3>
 <p>Usar um participante serverless de Pagamento:</p>
 <ul>
 <li>Ordens publica solicitacao em <code>sqs-pagamento-solicitar</code>.</li>
-<li>Lambda <code>oficina-pagamento</code> valida o payload e cria a order Pix no Mercado
-  Pago.</li>
+<li>Lambda <code>oficina-pagamento</code> valida o payload e cria a order Pix no Mercado Pago.</li>
 <li>A order e persistida no DynamoDB <code>orders</code>.</li>
-<li>A Lambda publica resultado em <code>sqs-pagamento-efetuado</code> ou
-  <code>sqs-pagamento-recusado</code>.</li>
+<li>A Lambda publica resultado em <code>sqs-pagamento-efetuado</code> ou <code>sqs-pagamento-recusado</code>.</li>
 <li>EventBridge aciona polling periodico para consultar orders pendentes.</li>
 </ul>
 <h3 id="contrato-da-solicitacao">Contrato da solicitacao<a class="headerlink" href="#contrato-da-solicitacao" title="Permanent link">&para;</a></h3>
