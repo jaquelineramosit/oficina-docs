@@ -73,21 +73,7 @@ sequenceDiagram
 
 ## Estados
 
-```mermaid
-stateDiagram-v2
-    [*] --> NaoIniciada
-    NaoIniciada --> PagamentoPendente: Orcamento aprovado
-    PagamentoPendente --> PagamentoPendente: Order Pix criada / QR disponivel
-    PagamentoPendente --> PagamentoAprovado: Mercado Pago processed
-    PagamentoPendente --> PagamentoRecusado: Gateway recusou ou Pix expirou
-    PagamentoAprovado --> ReservaPendente: Outbox ReservarEstoque
-    ReservaPendente --> Reservada: EstoqueReservado
-    Reservada --> Concluida: OS entra em execucao
-    ReservaPendente --> ReservaRecusada: ReservaEstoqueRecusada
-    ReservaRecusada --> CompensacaoPendente: compensar pagamento ou tratar manualmente
-    CompensacaoPendente --> Compensada: compensacao concluida
-    CompensacaoPendente --> CompensacaoFalhou: erro de compensacao
-```
+![Máquina de estados](assets/maq estado.png)
 
 Observacao: a mensagem `status: efetuado` representa "cobranca Pix criada",
 nao "pagamento confirmado". A saga deve continuar aguardando ate o polling
