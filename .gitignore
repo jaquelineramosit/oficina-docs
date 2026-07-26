@@ -1,0 +1,7 @@
+# Build local do MkDocs
+site/
+
+# Ambientes virtuais Python
+.venv/
+venv/
+__pycache__/

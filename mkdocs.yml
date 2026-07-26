@@ -1,0 +1,68 @@
+site_name: Arquitetura da Solução Oficina
+site_description: Documentação de arquitetura - Pós Arquitetura de Software FIAP (Fase 4)
+site_url: https://jaquelineramosit.github.io/oficina-docs/
+
+repo_url: https://github.com/jaquelineramosit/oficina-docs
+repo_name: jaquelineramosit/oficina-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+nav:
+  - Início: index.md
+  - Arquitetura final: 01-arquitetura-final.md
+  - Saga Pattern: 02-saga-pattern.md
+  - Microsserviços e tecnologias: 03-divisao-microsservicos-tecnologias.md
+  - Sequência da criação da OS: 04-sequencia-criacao-os.md
+  - Diagramas ER dos bancos: 05-diagrama-er-bancos.md
+  - RFCs: 06-rfcs.md
+  - ADRs: 07-adrs.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - search:
+      lang: pt
