@@ -1,0 +1,86 @@
+site_name: Arquitetura da Solução Oficina
+site_description: Documentação de arquitetura - Pós Arquitetura de Software FIAP (Fase 4)
+site_url: https://jaquelineramosit.github.io/oficina-docs/
+
+repo_url: https://github.com/jaquelineramosit/oficina-docs
+repo_name: jaquelineramosit/oficina-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+    - scheme: slate
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+
+nav:
+  - Início: index.md
+  - Arquitetura:
+      - Visão geral: arquitetura/visao-geral.md
+      - Componentes: arquitetura/componentes.md
+      - Microsserviços e tecnologias: arquitetura/microsservicos-tecnologias.md
+      - Comunicação e integração: arquitetura/comunicacao-integracao.md
+  - Fluxos:
+      - Criação da Ordem de Serviço: fluxos/sequencia-criacao-os.md
+      - Saga Pattern: fluxos/saga-pattern.md
+      - Bancos de dados: fluxos/bancos-er.md
+  - Decisões:
+      - ADRs: decisoes/adrs.md
+      - RFCs: decisoes/rfcs.md
+      - Limitações do AWS Academy: decisoes/limitacoes-aws-academy.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search:
+      lang: pt
