@@ -10,29 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://jaquelineramosit.github.io/oficina-docs/">
+        <link rel="canonical" href="https://jaquelineramosit.github.io/oficina-docs/fluxos/sequencia-criacao-os/">
       
       
+        <link rel="prev" href="../../arquitetura/comunicacao-integracao/">
       
-        <link rel="next" href="arquitetura/visao-geral/">
+      
+        <link rel="next" href="../saga-pattern/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Arquitetura da Solução Oficina</title>
+        <title>Criação da Ordem de Serviço - Arquitetura da Solução Oficina</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arquitetura-da-solucao-oficina" class="md-skip">
+        <a href="#criacao-da-ordem-de-servico" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -94,7 +96,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="." title="Arquitetura da Solução Oficina" class="md-header__button md-logo" aria-label="Arquitetura da Solução Oficina" data-md-component="logo">
+    <a href="../.." title="Arquitetura da Solução Oficina" class="md-header__button md-logo" aria-label="Arquitetura da Solução Oficina" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16v-3c0-1.11-.89-2-2-2h-6V8h2V2H9v6h2v3H5c-1.11 0-2 .89-2 2v3H1v6h6v-6H5v-3h6v3H9v6h6v-6h-2v-3h6v3h-2v6h6v-6zM11 4h2v2h-2zM5 20H3v-2h2zm8 0h-2v-2h2zm8 0h-2v-2h2z"/></svg>
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Início
+              Criação da Ordem de Serviço
             
           </span>
         </div>
@@ -224,11 +226,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -249,7 +249,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="arquitetura/visao-geral/" class="md-tabs__link">
+        <a href="../../arquitetura/visao-geral/" class="md-tabs__link">
           
   
   
@@ -267,11 +267,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="fluxos/sequencia-criacao-os/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -293,7 +295,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="decisoes/adrs/" class="md-tabs__link">
+        <a href="../../decisoes/adrs/" class="md-tabs__link">
           
   
   
@@ -335,7 +337,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Arquitetura da Solução Oficina" class="md-nav__button md-logo" aria-label="Arquitetura da Solução Oficina" data-md-component="logo">
+    <a href="../.." title="Arquitetura da Solução Oficina" class="md-nav__button md-logo" aria-label="Arquitetura da Solução Oficina" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16v-3c0-1.11-.89-2-2-2h-6V8h2V2H9v6h2v3H5c-1.11 0-2 .89-2 2v3H1v6h6v-6H5v-3h6v3H9v6h6v-6h-2v-3h6v3h-2v6h6v-6zM11 4h2v2h-2zM5 20H3v-2h2zm8 0h-2v-2h2zm8 0h-2v-2h2z"/></svg>
@@ -362,37 +364,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Início
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -408,92 +383,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#resumo-da-arquitetura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resumo da arquitetura
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#leitura-sugerida" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Leitura sugerida
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#navegacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Navegação
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#componentes-principais" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Componentes principais
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entregaveis-da-arquitetura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Entregáveis da arquitetura
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#repositorios-da-solucao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Repositórios da solução
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -567,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arquitetura/visao-geral/" class="md-nav__link">
+      <a href="../../arquitetura/visao-geral/" class="md-nav__link">
         
   
   
@@ -595,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arquitetura/componentes/" class="md-nav__link">
+      <a href="../../arquitetura/componentes/" class="md-nav__link">
         
   
   
@@ -623,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arquitetura/microsservicos-tecnologias/" class="md-nav__link">
+      <a href="../../arquitetura/microsservicos-tecnologias/" class="md-nav__link">
         
   
   
@@ -651,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arquitetura/comunicacao-integracao/" class="md-nav__link">
+      <a href="../../arquitetura/comunicacao-integracao/" class="md-nav__link">
         
   
   
@@ -683,8 +572,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -698,19 +589,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -728,7 +622,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -743,10 +637,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="fluxos/sequencia-criacao-os/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Criação da Ordem de Serviço
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -762,6 +683,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escopo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-de-sequencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de sequência
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regras-aplicadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras aplicadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dados-persistidos-em-ordens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dados persistidos em Ordens
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cenarios-alternativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenários alternativos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacao-com-o-pagamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relação com o pagamento
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -774,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fluxos/saga-pattern/" class="md-nav__link">
+      <a href="../saga-pattern/" class="md-nav__link">
         
   
   
@@ -802,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fluxos/bancos-er/" class="md-nav__link">
+      <a href="../bancos-er/" class="md-nav__link">
         
   
   
@@ -897,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="decisoes/adrs/" class="md-nav__link">
+      <a href="../../decisoes/adrs/" class="md-nav__link">
         
   
   
@@ -925,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="decisoes/rfcs/" class="md-nav__link">
+      <a href="../../decisoes/rfcs/" class="md-nav__link">
         
   
   
@@ -953,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="decisoes/limitacoes-aws-academy/" class="md-nav__link">
+      <a href="../../decisoes/limitacoes-aws-academy/" class="md-nav__link">
         
   
   
@@ -1008,10 +1015,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#resumo-da-arquitetura" class="md-nav__link">
+  <a href="#escopo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Resumo da arquitetura
+        Escopo
       
     </span>
   </a>
@@ -1019,10 +1026,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#leitura-sugerida" class="md-nav__link">
+  <a href="#diagrama-de-sequencia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Leitura sugerida
+        Diagrama de sequência
       
     </span>
   </a>
@@ -1030,10 +1037,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#navegacao" class="md-nav__link">
+  <a href="#regras-aplicadas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Navegação
+        Regras aplicadas
       
     </span>
   </a>
@@ -1041,10 +1048,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#componentes-principais" class="md-nav__link">
+  <a href="#dados-persistidos-em-ordens" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Componentes principais
+        Dados persistidos em Ordens
       
     </span>
   </a>
@@ -1052,10 +1059,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#entregaveis-da-arquitetura" class="md-nav__link">
+  <a href="#cenarios-alternativos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Entregáveis da arquitetura
+        Cenários alternativos
       
     </span>
   </a>
@@ -1063,10 +1070,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#repositorios-da-solucao" class="md-nav__link">
+  <a href="#relacao-com-o-pagamento" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Repositórios da solução
+        Relação com o pagamento
       
     </span>
   </a>
@@ -1090,7 +1097,7 @@
 
 
   
-    <a href="https://github.com/jaquelineramosit/oficina-docs/edit/main/docs/index.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/jaquelineramosit/oficina-docs/edit/main/docs/fluxos/sequencia-criacao-os.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1098,215 +1105,194 @@
   
 
 
-<div class="oficina-hero">
-<p class="oficina-eyebrow">Documentação de arquitetura · FIAP — Fase 4</p>
-<h1 id="arquitetura-da-solucao-oficina">Arquitetura da solução Oficina<a class="headerlink" href="#arquitetura-da-solucao-oficina" title="Link permanente para esta seção">&para;</a></h1>
-<p class="oficina-lead">
-Documentação técnica da plataforma de gestão de oficina mecânica, cobrindo
-microsserviços, bancos, integração assíncrona, pagamento Pix, segurança de
-borda, observabilidade e decisões arquiteturais.
-</p>
-<div aria-label="Tecnologias principais" class="oficina-pill-row">
-  <span>Microsserviços</span>
-  <span>AWS</span>
-  <span>K3s</span>
-  <span>SQS</span>
-  <span>RDS SQL Server</span>
-  <span>DynamoDB</span>
-  <span>Pagamento Pix</span>
-</div>
-</div>
-<div class="oficina-summary">
-<section class="oficina-panel">
-<h2 id="resumo-da-arquitetura">Resumo da arquitetura<a class="headerlink" href="#resumo-da-arquitetura" title="Link permanente para esta seção">&para;</a></h2>
-<p>A solução é dividida por contexto de negócio: Cadastro, Estoque, Ordens de
-Serviço, Pagamento e Autenticação. A entrada pública passa pelo API Gateway, a
-execução principal ocorre em serviços .NET no K3s, e o pagamento Pix roda em
-Lambda integrada por SQS, EventBridge, DynamoDB e Mercado Pago.</p>
-<p>Ordens de Serviço coordena a saga de aprovação do orçamento, confirmação do
-pagamento e reserva de estoque, mantendo rastreabilidade por estado local,
-snapshots, Inbox, Outbox e mensagens correlacionadas.</p>
-</section>
-<aside class="oficina-panel">
-<h2 id="leitura-sugerida">Leitura sugerida<a class="headerlink" href="#leitura-sugerida" title="Link permanente para esta seção">&para;</a></h2>
-<ol>
-<li><a href="arquitetura/visao-geral/">Visão geral</a></li>
-<li><a href="arquitetura/componentes/">Componentes</a></li>
-<li><a href="arquitetura/microsservicos-tecnologias/">Microsserviços e tecnologias</a></li>
-<li><a href="arquitetura/comunicacao-integracao/">Comunicação e integração</a></li>
-<li><a href="fluxos/sequencia-criacao-os/">Criação da Ordem de Serviço</a></li>
-<li><a href="fluxos/saga-pattern/">Saga Pattern</a></li>
-<li><a href="fluxos/bancos-er/">Bancos de dados</a></li>
-<li><a href="decisoes/adrs/">ADRs</a></li>
-<li><a href="decisoes/rfcs/">RFCs</a></li>
-<li><a href="decisoes/limitacoes-aws-academy/">Limitações do AWS Academy</a></li>
-</ol>
-</aside>
-</div>
-<h2 id="navegacao">Navegação<a class="headerlink" href="#navegacao" title="Link permanente para esta seção">&para;</a></h2>
-<div class="oficina-nav-grid">
-  <a class="oficina-card" href="arquitetura/visao-geral/">
-    <div>
-      <h3>Arquitetura</h3>
-      <p>
-        Visão geral da solução, componentes internos, divisão dos microsserviços,
-        tecnologias e comunicação entre serviços.
-      </p>
-    </div>
-    <span class="oficina-card__action">Abrir arquitetura</span>
-  </a>
+<h1 id="criacao-da-ordem-de-servico">Criação da Ordem de Serviço<a class="headerlink" href="#criacao-da-ordem-de-servico" title="Link permanente para esta seção">&para;</a></h1>
+<h2 id="escopo">Escopo<a class="headerlink" href="#escopo" title="Link permanente para esta seção">&para;</a></h2>
+<p>Esta página descreve a sequência da <strong>criação da Ordem de Serviço</strong>, por
+<code>POST /api/ordens-servico</code>.</p>
+<p>A saga não inicia na criação da OS — ela inicia quando um orçamento é
+aprovado. Na abertura, Ordens consulta Cadastro e Estoque, cria a OS e,
+quando aplicável, cria o orçamento inicial.</p>
+<h2 id="diagrama-de-sequencia">Diagrama de sequência<a class="headerlink" href="#diagrama-de-sequencia" title="Link permanente para esta seção">&para;</a></h2>
+<pre class="mermaid"><code>---
+config:
+  layout: elk
+---
+flowchart TB
+    subgraph BORDA["Entrada autorizada"]
+        direction LR
+        Usuario(["Funcionário / Admin"])
+        Gateway["API Gateway&lt;br/&gt;POST /api/ordens-servico"]
+        Authz["Lambda authorizer&lt;br/&gt;valida JWT"]
+        ALB["ALB interno&lt;br/&gt;identidade confiável"]
+    end
 
-  <a class="oficina-card" href="fluxos/sequencia-criacao-os/">
-    <div>
-      <h3>Fluxos</h3>
-      <p>
-        Criação da Ordem de Serviço, Saga Pattern, integração com pagamento e
-        modelos de dados dos bancos.
-      </p>
-    </div>
-    <span class="oficina-card__action">Abrir fluxos</span>
-  </a>
+    subgraph ORDENS["Serviço de Ordens"]
+        direction LR
+        OrdensApi["Ordens API&lt;br/&gt;oficina-ordens-servico"]
+        OrdensUc["OrdensUseCases&lt;br/&gt;Abrir(request)"]
+        Validacao["Valida request&lt;br/&gt;tipo e dados obrigatórios"]
+    end
 
-  <a class="oficina-card" href="decisoes/adrs/">
-    <div>
-      <h3>Decisões</h3>
-      <p>
-        ADRs, RFCs e restrições do AWS Academy que influenciaram escolhas de
-        implementação e operação.
-      </p>
-    </div>
-    <span class="oficina-card__action">Abrir decisões</span>
-  </a>
-</div>
+    subgraph CADASTRO["Consultas ao Cadastro"]
+        direction LR
+        Cliente["GET clientes/documento/{documento}&lt;br/&gt;ClienteDto"]
+        Veiculo["GET veiculos/placa/{placa}&lt;br/&gt;VeiculoDto"]
+        Propriedade["Valida propriedade&lt;br/&gt;veículo pertence ao cliente"]
+    end
 
-<h2 id="componentes-principais">Componentes principais<a class="headerlink" href="#componentes-principais" title="Link permanente para esta seção">&para;</a></h2>
-<div class="oficina-component-grid">
-  <article class="oficina-component-card">
-    <h3>API Gateway e Auth</h3>
-    <p><strong>Borda pública.</strong> Login por CPF, authorizer JWT e VPC Link para o ALB interno.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Cadastro</h3>
-    <p><strong>Dados mestres.</strong> Clientes, veículos, funcionários e catálogo de serviços.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Estoque</h3>
-    <p><strong>Materiais.</strong> Peças, insumos, saldos, movimentações e reservas por SQS FIFO.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Ordens de Serviço</h3>
-    <p><strong>Processo central.</strong> OS, orçamento, pagamentos lógicos, relatórios e saga.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Pagamento</h3>
-    <p><strong>Pix serverless.</strong> Lambda Python, SQS, EventBridge, DynamoDB e Mercado Pago.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Observabilidade</h3>
-    <p><strong>Rastreabilidade.</strong> Correlation ID, OpenTelemetry, CloudWatch e New Relic.</p>
-  </article>
-</div>
+    subgraph ORCAMENTO["Orçamento inicial opcional"]
+        direction LR
+        Decisao{"Tipo ou serviços&lt;br/&gt;na abertura?"}
+        Servicos["Cadastro&lt;br/&gt;POST servicos/consulta"]
+        Materiais["Estoque&lt;br/&gt;POST materiais/consulta"]
+        Disponibilidade["Estoque&lt;br/&gt;POST estoque/disponibilidade"]
+        Orcamento["Cria orçamento inicial&lt;br/&gt;e token de ação externa"]
+        SemOrcamento["Cria OS&lt;br/&gt;sem orçamento inicial"]
+    end
 
-<h2 id="entregaveis-da-arquitetura">Entregáveis da arquitetura<a class="headerlink" href="#entregaveis-da-arquitetura" title="Link permanente para esta seção">&para;</a></h2>
+    subgraph PERSISTENCIA["Persistência e resposta"]
+        direction LR
+        Persistir["INSERT OrdensServico&lt;br/&gt;orçamento e itens, se houver"]
+        OrdensDb[("OficinaOrdensServicoDb")]
+        Resposta["201 Created&lt;br/&gt;id, status e total"]
+        UsuarioFim(["Funcionário / Admin&lt;br/&gt;recebe a resposta"])
+    end
+
+    Usuario --&gt;|"1 - requisição HTTPS"| Gateway
+    Gateway --&gt;|"2 - autorização"| Authz
+    Authz --&gt;|"3 - claims autorizadas"| ALB
+    ALB --&gt;|"4 - roteamento"| OrdensApi
+    OrdensApi --&gt;|"5 - caso de uso"| OrdensUc
+    OrdensUc --&gt;|"6 - regras de entrada"| Validacao
+    Validacao --&gt;|"7 - consulta cliente"| Cliente
+    Cliente --&gt;|"8 - consulta veículo"| Veiculo
+    Veiculo --&gt;|"9 - regra de propriedade"| Propriedade
+    Propriedade --&gt;|"10 - decide composição"| Decisao
+    Decisao --&gt;|"sim"| Servicos
+    Servicos --&gt; Materiais
+    Materiais --&gt; Disponibilidade
+    Disponibilidade --&gt; Orcamento
+    Decisao --&gt;|"não"| SemOrcamento
+    Orcamento --&gt; Persistir
+    SemOrcamento --&gt; Persistir
+    Persistir --&gt; OrdensDb
+    OrdensDb --&gt;|"commit"| Resposta
+    Resposta --&gt; UsuarioFim
+
+    classDef ator fill:#E8F1F8,stroke:#3F6075,stroke-width:2px,color:#1F2933
+    classDef borda fill:#FFF8E1,stroke:#A06A00,stroke-width:2px,color:#2F2500
+    classDef app fill:#E8F1F8,stroke:#3F6075,stroke-width:2px,color:#1F2933
+    classDef consulta fill:#EEF4F2,stroke:#00897B,stroke-width:2px,color:#1F2933
+    classDef decisao fill:#FFF8E1,stroke:#A06A00,stroke-width:2px,color:#2F2500
+    classDef banco fill:#EEF4F2,stroke:#00897B,stroke-width:2px,color:#1F2933
+
+    class Usuario,UsuarioFim ator
+    class Gateway,Authz,ALB borda
+    class OrdensApi,OrdensUc,Validacao,Orcamento,SemOrcamento,Resposta app
+    class Cliente,Veiculo,Propriedade,Servicos,Materiais,Disponibilidade consulta
+    class Decisao decisao
+    class Persistir,OrdensDb banco
+
+    style BORDA fill:#FFF9E8,stroke:#E6D4A3,stroke-width:2px
+    style ORDENS fill:#F6F8FB,stroke:#D9E1EA,stroke-width:2px
+    style CADASTRO fill:#F3FAF8,stroke:#B7DCD6,stroke-width:2px
+    style ORCAMENTO fill:#FFF9E8,stroke:#E6D4A3,stroke-width:2px
+    style PERSISTENCIA fill:#F3FAF8,stroke:#B7DCD6,stroke-width:2px</code></pre>
+<h2 id="regras-aplicadas">Regras aplicadas<a class="headerlink" href="#regras-aplicadas" title="Link permanente para esta seção">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Entregável obrigatório</th>
-<th>Localização</th>
+<th>Passo</th>
+<th>Regra</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Diagrama geral da arquitetura</td>
-<td><a href="arquitetura/visao-geral/">Arquitetura → Visão geral</a></td>
+<td>Autorização</td>
+<td>Rota exige perfil Funcionário ou Admin</td>
 </tr>
 <tr>
-<td>Diagrama de componentes</td>
-<td><a href="arquitetura/componentes/">Arquitetura → Componentes</a></td>
+<td>Cliente</td>
+<td>Documento precisa existir no Cadastro</td>
 </tr>
 <tr>
-<td>Diagrama de sequência</td>
-<td><a href="fluxos/sequencia-criacao-os/">Fluxos → Criação da Ordem de Serviço</a></td>
+<td>Veículo</td>
+<td>Placa precisa existir no Cadastro</td>
 </tr>
 <tr>
-<td>Diagrama de bancos de dados (ER)</td>
-<td><a href="fluxos/bancos-er/">Fluxos → Bancos de dados</a></td>
+<td>Propriedade</td>
+<td>Veículo precisa pertencer ao cliente informado</td>
 </tr>
 <tr>
-<td>Comunicação e integração</td>
-<td><a href="arquitetura/comunicacao-integracao/">Arquitetura → Comunicação e integração</a></td>
+<td>Tipo</td>
+<td>Tipo inválido rejeita a abertura</td>
 </tr>
 <tr>
-<td>Divisão dos microsserviços</td>
-<td><a href="arquitetura/microsservicos-tecnologias/">Arquitetura → Microsserviços e tecnologias</a></td>
+<td>Serviços</td>
+<td>IDs de serviço são consultados no Cadastro</td>
 </tr>
 <tr>
-<td>Tecnologias utilizadas</td>
-<td><a href="arquitetura/microsservicos-tecnologias/">Arquitetura → Microsserviços e tecnologias</a></td>
+<td>Materiais</td>
+<td>Peças e insumos são consultados no Estoque</td>
 </tr>
 <tr>
-<td>Saga Pattern e estratégia adotada</td>
-<td><a href="fluxos/saga-pattern/">Fluxos → Saga Pattern</a></td>
+<td>Disponibilidade</td>
+<td>Estoque responde disponibilidade para compor/validar o orçamento</td>
 </tr>
 <tr>
-<td>ADRs</td>
-<td><a href="decisoes/adrs/">Decisões → ADRs</a></td>
+<td>Persistência</td>
+<td>OS e orçamento inicial são salvos no banco de Ordens</td>
 </tr>
 <tr>
-<td>RFCs</td>
-<td><a href="decisoes/rfcs/">Decisões → RFCs</a></td>
+<td>Histórico</td>
+<td>Ordens salva snapshots de cliente e veículo</td>
 </tr>
 </tbody>
 </table>
-<h2 id="repositorios-da-solucao">Repositórios da solução<a class="headerlink" href="#repositorios-da-solucao" title="Link permanente para esta seção">&para;</a></h2>
-<div class="oficina-repos">
+<h2 id="dados-persistidos-em-ordens">Dados persistidos em Ordens<a class="headerlink" href="#dados-persistidos-em-ordens" title="Link permanente para esta seção">&para;</a></h2>
+<p>Na abertura, Ordens pode gravar <code>OrdensServico</code>, <code>ItensServicoOs</code>,
+<code>Orcamentos</code>, <code>OrcamentoItensServico</code> e <code>OrcamentoItensMaterial</code>. Não há
+pagamento nem reserva de estoque nesse momento — ambos ocorrem depois, quando
+o orçamento é aprovado.</p>
+<h2 id="cenarios-alternativos">Cenários alternativos<a class="headerlink" href="#cenarios-alternativos" title="Link permanente para esta seção">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Repositório</th>
-<th>Responsabilidade</th>
+<th>Cenário</th>
+<th>Resultado</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-infra-db-fiap-fase4"><code>oficina-infra-db</code></a></td>
-<td>Rede privada, banco de dados relacional, segredos e estado do Terraform compartilhado</td>
+<td>Cliente não encontrado</td>
+<td>HTTP 404</td>
 </tr>
 <tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-infra-fiap-fase4"><code>oficina-infra</code></a></td>
-<td>Plataforma Kubernetes, ALB interno, entrada pública da API e observabilidade</td>
+<td>Veículo não encontrado</td>
+<td>HTTP 404</td>
 </tr>
 <tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-auth-lambda-fiap-fase4"><code>oficina-auth-lambda</code></a></td>
-<td>Login por CPF e validação de token na borda</td>
+<td>Veículo de outro cliente</td>
+<td>HTTP 403 por violação de propriedade</td>
 </tr>
 <tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-cadastro-fiap-fase4"><code>oficina-cadastro</code></a></td>
-<td>Clientes, veículos, funcionários e catálogo de serviços</td>
+<td>Serviço inexistente</td>
+<td>HTTP 404</td>
 </tr>
 <tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-estoque-fiap-fase4"><code>oficina-estoque</code></a></td>
-<td>Peças, insumos, saldos e reservas</td>
+<td>Falha transitória no Cadastro</td>
+<td>Erro propagado como falha de integração</td>
 </tr>
 <tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-ordens-servico-fiap-fase4"><code>oficina-ordens-servico</code></a></td>
-<td>Ordens de serviço, orçamento e coordenação da saga</td>
-</tr>
-<tr>
-<td><a href="https://github.com/jaquelineramosit/oficina-app-pagamento"><code>oficina-app-pagamento</code></a></td>
-<td>Lambda de pagamento Pix, integrada ao Mercado Pago</td>
-</tr>
-<tr>
-<td><a href="https://github.com/jaquelineramosit/oficina-infra-pagamento"><code>oficina-infra-pagamento</code></a></td>
-<td>Filas SQS e tabela DynamoDB do domínio de pagamento</td>
+<td>Falha no Estoque</td>
+<td>A abertura não confirma o orçamento inicial</td>
 </tr>
 </tbody>
 </table>
-</div>
-<p>O provisionamento segue uma ordem de dependência: infraestrutura de dados,
-plataforma Kubernetes, autenticação, Cadastro, Estoque, Ordens de Serviço,
-entrada pública da API e, por fim, observabilidade. Detalhes em
-<a href="arquitetura/comunicacao-integracao/">Comunicação e integração</a>.</p>
+<h2 id="relacao-com-o-pagamento">Relação com o pagamento<a class="headerlink" href="#relacao-com-o-pagamento" title="Link permanente para esta seção">&para;</a></h2>
+<p>O serviço de Pagamento não participa da criação da OS. Ele entra apenas
+depois da aprovação do orçamento, quando Ordens inicia a saga e solicita o
+Pix. Consulte <strong>Fluxos → Saga Pattern</strong> em <a href="../saga-pattern/">Saga Pattern</a>.</p>
 
 
 
@@ -1341,15 +1327,31 @@ entrada pública da API e, por fim, observabilidade. Detalhes em
       
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
+          
+          <a href="../../arquitetura/comunicacao-integracao/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Comunicação e integração">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Comunicação e integração
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="arquitetura/visao-geral/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Visão geral">
+          <a href="../saga-pattern/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Saga Pattern">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                Visão geral
+                Saga Pattern
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1405,14 +1407,14 @@ entrada pública da API e, por fim, observabilidade. Detalhes em
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.top", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips", "content.action.edit"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.top", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="javascripts/diagram-viewer.js"></script>
+        <script src="../../javascripts/diagram-viewer.js"></script>
       
-        <script src="javascripts/mermaid-setup.js"></script>
+        <script src="../../javascripts/mermaid-setup.js"></script>
       
     
   </body>

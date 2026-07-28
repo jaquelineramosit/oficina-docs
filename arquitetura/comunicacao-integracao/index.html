@@ -10,29 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://jaquelineramosit.github.io/oficina-docs/">
+        <link rel="canonical" href="https://jaquelineramosit.github.io/oficina-docs/arquitetura/comunicacao-integracao/">
       
       
+        <link rel="prev" href="../microsservicos-tecnologias/">
       
-        <link rel="next" href="arquitetura/visao-geral/">
+      
+        <link rel="next" href="../../fluxos/sequencia-criacao-os/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Arquitetura da Solução Oficina</title>
+        <title>Comunicação e integração - Arquitetura da Solução Oficina</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arquitetura-da-solucao-oficina" class="md-skip">
+        <a href="#comunicacao-e-integracao" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -94,7 +96,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="." title="Arquitetura da Solução Oficina" class="md-header__button md-logo" aria-label="Arquitetura da Solução Oficina" data-md-component="logo">
+    <a href="../.." title="Arquitetura da Solução Oficina" class="md-header__button md-logo" aria-label="Arquitetura da Solução Oficina" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16v-3c0-1.11-.89-2-2-2h-6V8h2V2H9v6h2v3H5c-1.11 0-2 .89-2 2v3H1v6h6v-6H5v-3h6v3H9v6h6v-6h-2v-3h6v3h-2v6h6v-6zM11 4h2v2h-2zM5 20H3v-2h2zm8 0h-2v-2h2zm8 0h-2v-2h2z"/></svg>
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Início
+              Comunicação e integração
             
           </span>
         </div>
@@ -224,11 +226,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -245,11 +245,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="arquitetura/visao-geral/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../visao-geral/" class="md-tabs__link">
           
   
   
@@ -271,7 +273,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="fluxos/sequencia-criacao-os/" class="md-tabs__link">
+        <a href="../../fluxos/sequencia-criacao-os/" class="md-tabs__link">
           
   
   
@@ -293,7 +295,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="decisoes/adrs/" class="md-tabs__link">
+        <a href="../../decisoes/adrs/" class="md-tabs__link">
           
   
   
@@ -335,7 +337,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Arquitetura da Solução Oficina" class="md-nav__button md-logo" aria-label="Arquitetura da Solução Oficina" data-md-component="logo">
+    <a href="../.." title="Arquitetura da Solução Oficina" class="md-nav__button md-logo" aria-label="Arquitetura da Solução Oficina" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16v-3c0-1.11-.89-2-2-2h-6V8h2V2H9v6h2v3H5c-1.11 0-2 .89-2 2v3H1v6h6v-6H5v-3h6v3H9v6h6v-6h-2v-3h6v3h-2v6h6v-6zM11 4h2v2h-2zM5 20H3v-2h2zm8 0h-2v-2h2zm8 0h-2v-2h2z"/></svg>
@@ -362,37 +364,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Início
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -408,92 +383,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#resumo-da-arquitetura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resumo da arquitetura
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#leitura-sugerida" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Leitura sugerida
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#navegacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Navegação
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#componentes-principais" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Componentes principais
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entregaveis-da-arquitetura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Entregáveis da arquitetura
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#repositorios-da-solucao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Repositórios da solução
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -502,8 +391,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -519,19 +410,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -549,7 +443,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -567,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arquitetura/visao-geral/" class="md-nav__link">
+      <a href="../visao-geral/" class="md-nav__link">
         
   
   
@@ -595,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arquitetura/componentes/" class="md-nav__link">
+      <a href="../componentes/" class="md-nav__link">
         
   
   
@@ -623,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arquitetura/microsservicos-tecnologias/" class="md-nav__link">
+      <a href="../microsservicos-tecnologias/" class="md-nav__link">
         
   
   
@@ -648,10 +542,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="arquitetura/comunicacao-integracao/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comunicação e integração
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -667,6 +588,87 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comunicacao-entre-os-servicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comunicação entre os serviços
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-de-comunicacao-da-saga-de-estoque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de comunicação da saga de estoque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-de-comunicacao-do-pagamento-pix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de comunicação do pagamento Pix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contratos-de-mensagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contratos de mensagem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contratos de mensagem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filas-e-mensagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filas e mensagens
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -746,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fluxos/sequencia-criacao-os/" class="md-nav__link">
+      <a href="../../fluxos/sequencia-criacao-os/" class="md-nav__link">
         
   
   
@@ -774,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fluxos/saga-pattern/" class="md-nav__link">
+      <a href="../../fluxos/saga-pattern/" class="md-nav__link">
         
   
   
@@ -802,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fluxos/bancos-er/" class="md-nav__link">
+      <a href="../../fluxos/bancos-er/" class="md-nav__link">
         
   
   
@@ -897,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="decisoes/adrs/" class="md-nav__link">
+      <a href="../../decisoes/adrs/" class="md-nav__link">
         
   
   
@@ -925,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="decisoes/rfcs/" class="md-nav__link">
+      <a href="../../decisoes/rfcs/" class="md-nav__link">
         
   
   
@@ -953,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="decisoes/limitacoes-aws-academy/" class="md-nav__link">
+      <a href="../../decisoes/limitacoes-aws-academy/" class="md-nav__link">
         
   
   
@@ -1008,10 +1010,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#resumo-da-arquitetura" class="md-nav__link">
+  <a href="#comunicacao-entre-os-servicos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Resumo da arquitetura
+        Comunicação entre os serviços
       
     </span>
   </a>
@@ -1019,10 +1021,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#leitura-sugerida" class="md-nav__link">
+  <a href="#diagrama-de-comunicacao-da-saga-de-estoque" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Leitura sugerida
+        Diagrama de comunicação da saga de estoque
       
     </span>
   </a>
@@ -1030,10 +1032,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#navegacao" class="md-nav__link">
+  <a href="#diagrama-de-comunicacao-do-pagamento-pix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Navegação
+        Diagrama de comunicação do pagamento Pix
       
     </span>
   </a>
@@ -1041,35 +1043,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#componentes-principais" class="md-nav__link">
+  <a href="#contratos-de-mensagem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Componentes principais
+        Contratos de mensagem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contratos de mensagem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filas-e-mensagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filas e mensagens
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#entregaveis-da-arquitetura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Entregáveis da arquitetura
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#repositorios-da-solucao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Repositórios da solução
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1090,7 +1087,7 @@
 
 
   
-    <a href="https://github.com/jaquelineramosit/oficina-docs/edit/main/docs/index.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/jaquelineramosit/oficina-docs/edit/main/docs/arquitetura/comunicacao-integracao.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1098,215 +1095,324 @@
   
 
 
-<div class="oficina-hero">
-<p class="oficina-eyebrow">Documentação de arquitetura · FIAP — Fase 4</p>
-<h1 id="arquitetura-da-solucao-oficina">Arquitetura da solução Oficina<a class="headerlink" href="#arquitetura-da-solucao-oficina" title="Link permanente para esta seção">&para;</a></h1>
-<p class="oficina-lead">
-Documentação técnica da plataforma de gestão de oficina mecânica, cobrindo
-microsserviços, bancos, integração assíncrona, pagamento Pix, segurança de
-borda, observabilidade e decisões arquiteturais.
-</p>
-<div aria-label="Tecnologias principais" class="oficina-pill-row">
-  <span>Microsserviços</span>
-  <span>AWS</span>
-  <span>K3s</span>
-  <span>SQS</span>
-  <span>RDS SQL Server</span>
-  <span>DynamoDB</span>
-  <span>Pagamento Pix</span>
-</div>
-</div>
-<div class="oficina-summary">
-<section class="oficina-panel">
-<h2 id="resumo-da-arquitetura">Resumo da arquitetura<a class="headerlink" href="#resumo-da-arquitetura" title="Link permanente para esta seção">&para;</a></h2>
-<p>A solução é dividida por contexto de negócio: Cadastro, Estoque, Ordens de
-Serviço, Pagamento e Autenticação. A entrada pública passa pelo API Gateway, a
-execução principal ocorre em serviços .NET no K3s, e o pagamento Pix roda em
-Lambda integrada por SQS, EventBridge, DynamoDB e Mercado Pago.</p>
-<p>Ordens de Serviço coordena a saga de aprovação do orçamento, confirmação do
-pagamento e reserva de estoque, mantendo rastreabilidade por estado local,
-snapshots, Inbox, Outbox e mensagens correlacionadas.</p>
-</section>
-<aside class="oficina-panel">
-<h2 id="leitura-sugerida">Leitura sugerida<a class="headerlink" href="#leitura-sugerida" title="Link permanente para esta seção">&para;</a></h2>
-<ol>
-<li><a href="arquitetura/visao-geral/">Visão geral</a></li>
-<li><a href="arquitetura/componentes/">Componentes</a></li>
-<li><a href="arquitetura/microsservicos-tecnologias/">Microsserviços e tecnologias</a></li>
-<li><a href="arquitetura/comunicacao-integracao/">Comunicação e integração</a></li>
-<li><a href="fluxos/sequencia-criacao-os/">Criação da Ordem de Serviço</a></li>
-<li><a href="fluxos/saga-pattern/">Saga Pattern</a></li>
-<li><a href="fluxos/bancos-er/">Bancos de dados</a></li>
-<li><a href="decisoes/adrs/">ADRs</a></li>
-<li><a href="decisoes/rfcs/">RFCs</a></li>
-<li><a href="decisoes/limitacoes-aws-academy/">Limitações do AWS Academy</a></li>
-</ol>
-</aside>
-</div>
-<h2 id="navegacao">Navegação<a class="headerlink" href="#navegacao" title="Link permanente para esta seção">&para;</a></h2>
-<div class="oficina-nav-grid">
-  <a class="oficina-card" href="arquitetura/visao-geral/">
-    <div>
-      <h3>Arquitetura</h3>
-      <p>
-        Visão geral da solução, componentes internos, divisão dos microsserviços,
-        tecnologias e comunicação entre serviços.
-      </p>
-    </div>
-    <span class="oficina-card__action">Abrir arquitetura</span>
-  </a>
-
-  <a class="oficina-card" href="fluxos/sequencia-criacao-os/">
-    <div>
-      <h3>Fluxos</h3>
-      <p>
-        Criação da Ordem de Serviço, Saga Pattern, integração com pagamento e
-        modelos de dados dos bancos.
-      </p>
-    </div>
-    <span class="oficina-card__action">Abrir fluxos</span>
-  </a>
-
-  <a class="oficina-card" href="decisoes/adrs/">
-    <div>
-      <h3>Decisões</h3>
-      <p>
-        ADRs, RFCs e restrições do AWS Academy que influenciaram escolhas de
-        implementação e operação.
-      </p>
-    </div>
-    <span class="oficina-card__action">Abrir decisões</span>
-  </a>
-</div>
-
-<h2 id="componentes-principais">Componentes principais<a class="headerlink" href="#componentes-principais" title="Link permanente para esta seção">&para;</a></h2>
-<div class="oficina-component-grid">
-  <article class="oficina-component-card">
-    <h3>API Gateway e Auth</h3>
-    <p><strong>Borda pública.</strong> Login por CPF, authorizer JWT e VPC Link para o ALB interno.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Cadastro</h3>
-    <p><strong>Dados mestres.</strong> Clientes, veículos, funcionários e catálogo de serviços.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Estoque</h3>
-    <p><strong>Materiais.</strong> Peças, insumos, saldos, movimentações e reservas por SQS FIFO.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Ordens de Serviço</h3>
-    <p><strong>Processo central.</strong> OS, orçamento, pagamentos lógicos, relatórios e saga.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Pagamento</h3>
-    <p><strong>Pix serverless.</strong> Lambda Python, SQS, EventBridge, DynamoDB e Mercado Pago.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Observabilidade</h3>
-    <p><strong>Rastreabilidade.</strong> Correlation ID, OpenTelemetry, CloudWatch e New Relic.</p>
-  </article>
-</div>
-
-<h2 id="entregaveis-da-arquitetura">Entregáveis da arquitetura<a class="headerlink" href="#entregaveis-da-arquitetura" title="Link permanente para esta seção">&para;</a></h2>
+<h1 id="comunicacao-e-integracao">Comunicação e integração<a class="headerlink" href="#comunicacao-e-integracao" title="Link permanente para esta seção">&para;</a></h1>
+<p>Esta página concentra os contratos de comunicação entre os serviços. Detalhes
+de decisão ficam em <a href="../../decisoes/rfcs/">Decisões → RFCs</a>.</p>
+<h2 id="comunicacao-entre-os-servicos">Comunicação entre os serviços<a class="headerlink" href="#comunicacao-entre-os-servicos" title="Link permanente para esta seção">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Entregável obrigatório</th>
-<th>Localização</th>
+<th>Tipo</th>
+<th>Origem</th>
+<th>Destino</th>
+<th>Protocolo</th>
+<th>Uso</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Diagrama geral da arquitetura</td>
-<td><a href="arquitetura/visao-geral/">Arquitetura → Visão geral</a></td>
+<td>Pública anônima</td>
+<td>Cliente</td>
+<td>API Gateway → <code>auth-cpf</code></td>
+<td>HTTPS / Lambda proxy</td>
+<td>Login por CPF</td>
 </tr>
 <tr>
-<td>Diagrama de componentes</td>
-<td><a href="arquitetura/componentes/">Arquitetura → Componentes</a></td>
+<td>Pública protegida</td>
+<td>Cliente</td>
+<td>API Gateway → authorizer → ALB</td>
+<td>HTTPS + VPC Link</td>
+<td>Operações das APIs</td>
 </tr>
 <tr>
-<td>Diagrama de sequência</td>
-<td><a href="fluxos/sequencia-criacao-os/">Fluxos → Criação da Ordem de Serviço</a></td>
+<td>Interna síncrona</td>
+<td>Ordens</td>
+<td>Cadastro</td>
+<td>HTTP via ALB interno</td>
+<td>Cliente, veículo e serviços</td>
 </tr>
 <tr>
-<td>Diagrama de bancos de dados (ER)</td>
-<td><a href="fluxos/bancos-er/">Fluxos → Bancos de dados</a></td>
+<td>Interna síncrona</td>
+<td>Ordens</td>
+<td>Estoque</td>
+<td>HTTP via ALB interno</td>
+<td>Materiais e disponibilidade</td>
 </tr>
 <tr>
-<td>Comunicação e integração</td>
-<td><a href="arquitetura/comunicacao-integracao/">Arquitetura → Comunicação e integração</a></td>
+<td>Interna assíncrona</td>
+<td>Ordens</td>
+<td>Estoque</td>
+<td>SQS FIFO</td>
+<td>Reserva e liberação de estoque</td>
 </tr>
 <tr>
-<td>Divisão dos microsserviços</td>
-<td><a href="arquitetura/microsservicos-tecnologias/">Arquitetura → Microsserviços e tecnologias</a></td>
+<td>Interna assíncrona</td>
+<td>Estoque</td>
+<td>Ordens</td>
+<td>SQS FIFO</td>
+<td>Resultado da reserva</td>
 </tr>
 <tr>
-<td>Tecnologias utilizadas</td>
-<td><a href="arquitetura/microsservicos-tecnologias/">Arquitetura → Microsserviços e tecnologias</a></td>
+<td>Interna assíncrona</td>
+<td>Ordens</td>
+<td>Pagamento</td>
+<td>SQS</td>
+<td>Criação de order Pix</td>
 </tr>
 <tr>
-<td>Saga Pattern e estratégia adotada</td>
-<td><a href="fluxos/saga-pattern/">Fluxos → Saga Pattern</a></td>
+<td>Interna assíncrona</td>
+<td>Pagamento</td>
+<td>Ordens</td>
+<td>SQS</td>
+<td>Status <code>efetuado</code>, <code>pago</code> ou <code>recusado</code></td>
 </tr>
 <tr>
-<td>ADRs</td>
-<td><a href="decisoes/adrs/">Decisões → ADRs</a></td>
+<td>Externa</td>
+<td>Pagamento</td>
+<td>Mercado Pago</td>
+<td>HTTPS</td>
+<td>Criação e consulta de orders Pix</td>
 </tr>
 <tr>
-<td>RFCs</td>
-<td><a href="decisoes/rfcs/">Decisões → RFCs</a></td>
+<td>Persistência SQL</td>
+<td>Serviços .NET</td>
+<td>RDS SQL Server</td>
+<td>TDS</td>
+<td>Dados transacionais dos contextos</td>
+</tr>
+<tr>
+<td>Persistência NoSQL</td>
+<td>Pagamento</td>
+<td>DynamoDB</td>
+<td>AWS SDK</td>
+<td>Estado das orders Pix</td>
 </tr>
 </tbody>
 </table>
-<h2 id="repositorios-da-solucao">Repositórios da solução<a class="headerlink" href="#repositorios-da-solucao" title="Link permanente para esta seção">&para;</a></h2>
-<div class="oficina-repos">
+<h2 id="diagrama-de-comunicacao-da-saga-de-estoque">Diagrama de comunicação da saga de estoque<a class="headerlink" href="#diagrama-de-comunicacao-da-saga-de-estoque" title="Link permanente para esta seção">&para;</a></h2>
+<p>Disparada quando o orçamento é aprovado e o pagamento é confirmado.</p>
+<pre class="mermaid"><code>---
+config:
+  layout: elk
+---
+flowchart TB
+    subgraph ORIGEM["Orquestração em Ordens"]
+        direction LR
+        Ordens["oficina-ordens-servico&lt;br/&gt;pagamento aprovado"]
+        OrdensOutbox[("OficinaOrdensServicoDb&lt;br/&gt;Outbox")]
+    end
+
+    subgraph COMANDO["Comando para Estoque"]
+        direction LR
+        Comandos[/"SQS FIFO&lt;br/&gt;oficina-estoque-comandos.fifo"/]
+    end
+
+    subgraph ESTOQUE_LANE["Execução em Estoque"]
+        direction LR
+        Estoque["oficina-estoque&lt;br/&gt;reserva materiais"]
+        EstoqueDb[("OficinaEstoqueDb&lt;br/&gt;Inbox + reserva + Outbox")]
+    end
+
+    subgraph EVENTO["Evento para Ordens"]
+        direction LR
+        Eventos[/"SQS FIFO&lt;br/&gt;oficina-ordens-eventos.fifo"/]
+    end
+
+    subgraph RETORNO["Conclusão da saga"]
+        direction LR
+        OrdensFim["oficina-ordens-servico&lt;br/&gt;saga concluída&lt;br/&gt;OS em execução"]
+        OrdensInbox[("OficinaOrdensServicoDb&lt;br/&gt;Inbox + status da OS")]
+    end
+
+    Ordens --&gt;|"1 - grava transição local"| OrdensOutbox
+    OrdensOutbox ==&gt;|"2 - publica ReservarEstoque&lt;br/&gt;MessageGroupId = ordemServicoId"| Comandos
+    Comandos ==&gt;|"3 - entrega comando"| Estoque
+    Estoque --&gt;|"4 - aplica reserva"| EstoqueDb
+    EstoqueDb ==&gt;|"5 - publica EstoqueReservado"| Eventos
+    Eventos ==&gt;|"6 - entrega evento"| OrdensFim
+    OrdensFim --&gt;|"7 - registra conclusão"| OrdensInbox
+
+    classDef app fill:#E8F1F8,stroke:#3F6075,stroke-width:2px,color:#1F2933
+    classDef banco fill:#EEF4F2,stroke:#00897B,stroke-width:2px,color:#1F2933
+    classDef fila fill:#F4F7FB,stroke:#627282,stroke-width:2px,color:#1F2933
+
+    class Ordens,Estoque,OrdensFim app
+    class OrdensOutbox,EstoqueDb,OrdensInbox banco
+    class Comandos,Eventos fila
+
+    style ORIGEM fill:#F6F8FB,stroke:#D9E1EA,stroke-width:2px
+    style COMANDO fill:#F4F7FB,stroke:#D9E1EA,stroke-width:2px
+    style ESTOQUE_LANE fill:#F3FAF8,stroke:#B7DCD6,stroke-width:2px
+    style EVENTO fill:#F4F7FB,stroke:#D9E1EA,stroke-width:2px
+    style RETORNO fill:#F6F8FB,stroke:#D9E1EA,stroke-width:2px</code></pre>
+<h2 id="diagrama-de-comunicacao-do-pagamento-pix">Diagrama de comunicação do pagamento Pix<a class="headerlink" href="#diagrama-de-comunicacao-do-pagamento-pix" title="Link permanente para esta seção">&para;</a></h2>
+<p><code>oficina-ordens-servico</code> aparece nas duas pontas do fluxo: publica a
+solicitação quando o orçamento é aprovado e consome o resultado quando o
+Pix é confirmado.</p>
+<pre class="mermaid"><code>---
+config:
+  layout: elk
+---
+flowchart TB
+    subgraph ORIGEM_PIX["Solicitação em Ordens"]
+        direction LR
+        Ordens["oficina-ordens-servico&lt;br/&gt;orçamento aprovado"]
+        OrdensDb[("OficinaOrdensServicoDb&lt;br/&gt;pagamento e saga")]
+    end
+
+    subgraph ENTRADA_PIX["Entrada assíncrona"]
+        direction LR
+        Solicitar[/"SQS&lt;br/&gt;sqs-pagamento-solicitar"/]
+    end
+
+    subgraph PROCESSAMENTO_PIX["Pagamento serverless"]
+        direction LR
+        PayLambda["Lambda oficina-pagamento&lt;br/&gt;Python 3.12"]
+        Timer["EventBridge&lt;br/&gt;polling agendado"]
+    end
+
+    subgraph PROVEDOR_PIX["Provedor e estado local"]
+        direction LR
+        MP["Mercado Pago&lt;br/&gt;Orders API Pix"]
+        PayDb[("DynamoDB&lt;br/&gt;orders")]
+    end
+
+    subgraph RESULTADO_PIX["Resultado para Ordens"]
+        direction LR
+        Efetuado[/"SQS&lt;br/&gt;sqs-pagamento-efetuado"/]
+        Recusado[/"SQS&lt;br/&gt;sqs-pagamento-recusado"/]
+    end
+
+    subgraph RETORNO_PIX["Decisão do orquestrador"]
+        direction LR
+        OrdensOk["oficina-ordens-servico&lt;br/&gt;PagamentoAprovado&lt;br/&gt;inicia reserva"]
+        OrdensRecusa["oficina-ordens-servico&lt;br/&gt;pagamento recusado&lt;br/&gt;não reserva estoque"]
+    end
+
+    Ordens --&gt;|"1 - aprova orçamento"| OrdensDb
+    OrdensDb ==&gt;|"2 - publica solicitação Pix"| Solicitar
+    Solicitar ==&gt;|"3 - event source mapping"| PayLambda
+    Timer --&gt;|"4 - consulta pendências"| PayLambda
+    PayLambda --&gt;|"5 - cria / consulta order"| MP
+    PayLambda --&gt;|"6 - persiste status local"| PayDb
+    PayLambda ==&gt;|"7a - efetuado, depois pago"| Efetuado
+    PayLambda ==&gt;|"7b - recusado"| Recusado
+    Efetuado ==&gt;|"8a - pagamento confirmado"| OrdensOk
+    Recusado ==&gt;|"8b - encerra sem estoque"| OrdensRecusa
+
+    classDef app fill:#E8F1F8,stroke:#3F6075,stroke-width:2px,color:#1F2933
+    classDef banco fill:#EEF4F2,stroke:#00897B,stroke-width:2px,color:#1F2933
+    classDef lambda fill:#FFF8E1,stroke:#A06A00,stroke-width:2px,color:#2F2500
+    classDef externo fill:#263238,stroke:#111922,stroke-width:2px,color:#ffffff
+    classDef fila fill:#F4F7FB,stroke:#627282,stroke-width:2px,color:#1F2933
+
+    class Ordens,OrdensOk,OrdensRecusa app
+    class OrdensDb,PayDb banco
+    class PayLambda,Timer lambda
+    class MP externo
+    class Solicitar,Efetuado,Recusado fila
+
+    style ORIGEM_PIX fill:#F6F8FB,stroke:#D9E1EA,stroke-width:2px
+    style ENTRADA_PIX fill:#F4F7FB,stroke:#D9E1EA,stroke-width:2px
+    style PROCESSAMENTO_PIX fill:#FFF9E8,stroke:#E6D4A3,stroke-width:2px
+    style PROVEDOR_PIX fill:#F3FAF8,stroke:#B7DCD6,stroke-width:2px
+    style RESULTADO_PIX fill:#F4F7FB,stroke:#D9E1EA,stroke-width:2px
+    style RETORNO_PIX fill:#F6F8FB,stroke:#D9E1EA,stroke-width:2px</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Sobre o status <code>efetuado</code></p>
+<p>O status <code>efetuado</code> significa "cobrança Pix criada", não "pagamento
+confirmado". A saga permanece aguardando até o polling identificar a order
+como processada no Mercado Pago e publicar o status <code>pago</code>.</p>
+</div>
+<h2 id="contratos-de-mensagem">Contratos de mensagem<a class="headerlink" href="#contratos-de-mensagem" title="Link permanente para esta seção">&para;</a></h2>
+<p>Toda mensagem da saga de estoque usa um envelope comum:</p>
 <table>
 <thead>
 <tr>
-<th>Repositório</th>
-<th>Responsabilidade</th>
+<th>Campo</th>
+<th>Descrição</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-infra-db-fiap-fase4"><code>oficina-infra-db</code></a></td>
-<td>Rede privada, banco de dados relacional, segredos e estado do Terraform compartilhado</td>
+<td><code>messageId</code></td>
+<td>Identificador único da mensagem, usado na deduplicação FIFO</td>
 </tr>
 <tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-infra-fiap-fase4"><code>oficina-infra</code></a></td>
-<td>Plataforma Kubernetes, ALB interno, entrada pública da API e observabilidade</td>
+<td><code>messageType</code></td>
+<td>Nome do comando ou evento</td>
 </tr>
 <tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-auth-lambda-fiap-fase4"><code>oficina-auth-lambda</code></a></td>
-<td>Login por CPF e validação de token na borda</td>
+<td><code>schemaVersion</code></td>
+<td>Versão do contrato</td>
 </tr>
 <tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-cadastro-fiap-fase4"><code>oficina-cadastro</code></a></td>
-<td>Clientes, veículos, funcionários e catálogo de serviços</td>
+<td><code>occurredAtUtc</code></td>
+<td>Instante de geração da mensagem</td>
 </tr>
 <tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-estoque-fiap-fase4"><code>oficina-estoque</code></a></td>
-<td>Peças, insumos, saldos e reservas</td>
+<td><code>correlationId</code></td>
+<td>Identificador para rastrear o fluxo fim a fim</td>
 </tr>
 <tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-ordens-servico-fiap-fase4"><code>oficina-ordens-servico</code></a></td>
-<td>Ordens de serviço, orçamento e coordenação da saga</td>
+<td><code>causationId</code></td>
+<td>Mensagem que originou esta, quando aplicável</td>
 </tr>
 <tr>
-<td><a href="https://github.com/jaquelineramosit/oficina-app-pagamento"><code>oficina-app-pagamento</code></a></td>
-<td>Lambda de pagamento Pix, integrada ao Mercado Pago</td>
+<td><code>ordemServicoId</code></td>
+<td>Chave de negócio e <code>MessageGroupId</code> da fila FIFO</td>
 </tr>
 <tr>
-<td><a href="https://github.com/jaquelineramosit/oficina-infra-pagamento"><code>oficina-infra-pagamento</code></a></td>
-<td>Filas SQS e tabela DynamoDB do domínio de pagamento</td>
+<td><code>payload</code></td>
+<td>Corpo específico do tipo de mensagem</td>
 </tr>
 </tbody>
 </table>
-</div>
-<p>O provisionamento segue uma ordem de dependência: infraestrutura de dados,
-plataforma Kubernetes, autenticação, Cadastro, Estoque, Ordens de Serviço,
-entrada pública da API e, por fim, observabilidade. Detalhes em
-<a href="arquitetura/comunicacao-integracao/">Comunicação e integração</a>.</p>
+<h3 id="filas-e-mensagens">Filas e mensagens<a class="headerlink" href="#filas-e-mensagens" title="Link permanente para esta seção">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Fila</th>
+<th>Produtor</th>
+<th>Consumidor</th>
+<th>Mensagens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>oficina-estoque-comandos.fifo</code></td>
+<td>Ordens</td>
+<td>Estoque</td>
+<td><code>ReservarEstoque</code>, <code>LiberarReservaEstoque</code></td>
+</tr>
+<tr>
+<td><code>oficina-ordens-eventos.fifo</code></td>
+<td>Estoque</td>
+<td>Ordens</td>
+<td><code>EstoqueReservado</code>, <code>ReservaEstoqueRecusada</code>, <code>ReservaEstoqueLiberada</code>, <code>LiberacaoReservaFalhou</code></td>
+</tr>
+<tr>
+<td><code>sqs-pagamento-solicitar</code></td>
+<td>Ordens</td>
+<td>Pagamento</td>
+<td>Solicitação de criação de Pix</td>
+</tr>
+<tr>
+<td><code>sqs-pagamento-efetuado</code></td>
+<td>Pagamento</td>
+<td>Ordens</td>
+<td>Status <code>efetuado</code> e <code>pago</code></td>
+</tr>
+<tr>
+<td><code>sqs-pagamento-recusado</code></td>
+<td>Pagamento</td>
+<td>Ordens</td>
+<td>Status <code>recusado</code></td>
+</tr>
+</tbody>
+</table>
+<p>Cada fila principal da saga de estoque tem uma DLQ associada, para isolar
+mensagens inválidas ou com retentativas esgotadas.</p>
 
 
 
@@ -1341,15 +1447,31 @@ entrada pública da API e, por fim, observabilidade. Detalhes em
       
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
+          
+          <a href="../microsservicos-tecnologias/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Microsserviços e tecnologias">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Microsserviços e tecnologias
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="arquitetura/visao-geral/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Visão geral">
+          <a href="../../fluxos/sequencia-criacao-os/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Criação da Ordem de Serviço">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                Visão geral
+                Criação da Ordem de Serviço
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1405,14 +1527,14 @@ entrada pública da API e, por fim, observabilidade. Detalhes em
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.top", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips", "content.action.edit"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.top", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="javascripts/diagram-viewer.js"></script>
+        <script src="../../javascripts/diagram-viewer.js"></script>
       
-        <script src="javascripts/mermaid-setup.js"></script>
+        <script src="../../javascripts/mermaid-setup.js"></script>
       
     
   </body>

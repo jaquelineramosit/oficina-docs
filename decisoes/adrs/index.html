@@ -10,29 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://jaquelineramosit.github.io/oficina-docs/">
+        <link rel="canonical" href="https://jaquelineramosit.github.io/oficina-docs/decisoes/adrs/">
       
       
+        <link rel="prev" href="../../fluxos/bancos-er/">
       
-        <link rel="next" href="arquitetura/visao-geral/">
+      
+        <link rel="next" href="../rfcs/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Arquitetura da Solução Oficina</title>
+        <title>ADRs - Arquitetura da Solução Oficina</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arquitetura-da-solucao-oficina" class="md-skip">
+        <a href="#adrs" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -94,7 +96,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="." title="Arquitetura da Solução Oficina" class="md-header__button md-logo" aria-label="Arquitetura da Solução Oficina" data-md-component="logo">
+    <a href="../.." title="Arquitetura da Solução Oficina" class="md-header__button md-logo" aria-label="Arquitetura da Solução Oficina" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16v-3c0-1.11-.89-2-2-2h-6V8h2V2H9v6h2v3H5c-1.11 0-2 .89-2 2v3H1v6h6v-6H5v-3h6v3H9v6h6v-6h-2v-3h6v3h-2v6h6v-6zM11 4h2v2h-2zM5 20H3v-2h2zm8 0h-2v-2h2zm8 0h-2v-2h2z"/></svg>
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Início
+              ADRs
             
           </span>
         </div>
@@ -224,11 +226,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -249,7 +249,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="arquitetura/visao-geral/" class="md-tabs__link">
+        <a href="../../arquitetura/visao-geral/" class="md-tabs__link">
           
   
   
@@ -271,7 +271,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="fluxos/sequencia-criacao-os/" class="md-tabs__link">
+        <a href="../../fluxos/sequencia-criacao-os/" class="md-tabs__link">
           
   
   
@@ -289,11 +289,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="decisoes/adrs/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -335,7 +337,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Arquitetura da Solução Oficina" class="md-nav__button md-logo" aria-label="Arquitetura da Solução Oficina" data-md-component="logo">
+    <a href="../.." title="Arquitetura da Solução Oficina" class="md-nav__button md-logo" aria-label="Arquitetura da Solução Oficina" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16v-3c0-1.11-.89-2-2-2h-6V8h2V2H9v6h2v3H5c-1.11 0-2 .89-2 2v3H1v6h6v-6H5v-3h6v3H9v6h6v-6h-2v-3h6v3h-2v6h6v-6zM11 4h2v2h-2zM5 20H3v-2h2zm8 0h-2v-2h2zm8 0h-2v-2h2z"/></svg>
@@ -362,37 +364,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Início
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -408,92 +383,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#resumo-da-arquitetura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resumo da arquitetura
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#leitura-sugerida" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Leitura sugerida
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#navegacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Navegação
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#componentes-principais" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Componentes principais
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entregaveis-da-arquitetura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Entregáveis da arquitetura
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#repositorios-da-solucao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Repositórios da solução
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -567,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arquitetura/visao-geral/" class="md-nav__link">
+      <a href="../../arquitetura/visao-geral/" class="md-nav__link">
         
   
   
@@ -595,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arquitetura/componentes/" class="md-nav__link">
+      <a href="../../arquitetura/componentes/" class="md-nav__link">
         
   
   
@@ -623,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arquitetura/microsservicos-tecnologias/" class="md-nav__link">
+      <a href="../../arquitetura/microsservicos-tecnologias/" class="md-nav__link">
         
   
   
@@ -651,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arquitetura/comunicacao-integracao/" class="md-nav__link">
+      <a href="../../arquitetura/comunicacao-integracao/" class="md-nav__link">
         
   
   
@@ -746,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fluxos/sequencia-criacao-os/" class="md-nav__link">
+      <a href="../../fluxos/sequencia-criacao-os/" class="md-nav__link">
         
   
   
@@ -774,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fluxos/saga-pattern/" class="md-nav__link">
+      <a href="../../fluxos/saga-pattern/" class="md-nav__link">
         
   
   
@@ -802,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="fluxos/bancos-er/" class="md-nav__link">
+      <a href="../../fluxos/bancos-er/" class="md-nav__link">
         
   
   
@@ -834,8 +723,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -849,19 +740,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -879,7 +773,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -894,10 +788,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="decisoes/adrs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADRs
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -913,6 +834,158 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adr-001" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-001 — Dividir a solução por bounded context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-002" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-002 — Usar banco exclusivo por microsserviço no mesmo RDS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-003" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-003 — Usar DynamoDB para Pagamento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-004" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-004 — Executar os microsserviços .NET em K3s single-node
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-005" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-005 — Executar Pagamento como Lambda serverless
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-006" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-006 — Usar Saga orquestrada, com o orquestrador embarcado em Ordens de Serviço
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-007" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-007 — Aplicar Outbox e Inbox na saga Ordens/Estoque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-008" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-008 — Usar SQS para integrar Ordens e Pagamento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-009" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-009 — Usar polling do Mercado Pago em vez de webhook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-010 — Usar Lambda authorizer e login por CPF
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-011" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-011 — Provisionar infraestrutura com Terraform e CI/CD independente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-012" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-012 — Preparar observabilidade com OpenTelemetry e New Relic fail-open
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -925,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="decisoes/rfcs/" class="md-nav__link">
+      <a href="../rfcs/" class="md-nav__link">
         
   
   
@@ -953,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="decisoes/limitacoes-aws-academy/" class="md-nav__link">
+      <a href="../limitacoes-aws-academy/" class="md-nav__link">
         
   
   
@@ -1008,10 +1081,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#resumo-da-arquitetura" class="md-nav__link">
+  <a href="#adr-001" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Resumo da arquitetura
+        ADR-001 — Dividir a solução por bounded context
       
     </span>
   </a>
@@ -1019,10 +1092,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#leitura-sugerida" class="md-nav__link">
+  <a href="#adr-002" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Leitura sugerida
+        ADR-002 — Usar banco exclusivo por microsserviço no mesmo RDS
       
     </span>
   </a>
@@ -1030,10 +1103,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#navegacao" class="md-nav__link">
+  <a href="#adr-003" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Navegação
+        ADR-003 — Usar DynamoDB para Pagamento
       
     </span>
   </a>
@@ -1041,10 +1114,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#componentes-principais" class="md-nav__link">
+  <a href="#adr-004" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Componentes principais
+        ADR-004 — Executar os microsserviços .NET em K3s single-node
       
     </span>
   </a>
@@ -1052,10 +1125,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#entregaveis-da-arquitetura" class="md-nav__link">
+  <a href="#adr-005" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Entregáveis da arquitetura
+        ADR-005 — Executar Pagamento como Lambda serverless
       
     </span>
   </a>
@@ -1063,10 +1136,76 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#repositorios-da-solucao" class="md-nav__link">
+  <a href="#adr-006" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Repositórios da solução
+        ADR-006 — Usar Saga orquestrada, com o orquestrador embarcado em Ordens de Serviço
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-007" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-007 — Aplicar Outbox e Inbox na saga Ordens/Estoque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-008" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-008 — Usar SQS para integrar Ordens e Pagamento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-009" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-009 — Usar polling do Mercado Pago em vez de webhook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-010 — Usar Lambda authorizer e login por CPF
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-011" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-011 — Provisionar infraestrutura com Terraform e CI/CD independente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-012" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-012 — Preparar observabilidade com OpenTelemetry e New Relic fail-open
       
     </span>
   </a>
@@ -1090,7 +1229,7 @@
 
 
   
-    <a href="https://github.com/jaquelineramosit/oficina-docs/edit/main/docs/index.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/jaquelineramosit/oficina-docs/edit/main/docs/decisoes/adrs.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1098,215 +1237,205 @@
   
 
 
-<div class="oficina-hero">
-<p class="oficina-eyebrow">Documentação de arquitetura · FIAP — Fase 4</p>
-<h1 id="arquitetura-da-solucao-oficina">Arquitetura da solução Oficina<a class="headerlink" href="#arquitetura-da-solucao-oficina" title="Link permanente para esta seção">&para;</a></h1>
-<p class="oficina-lead">
-Documentação técnica da plataforma de gestão de oficina mecânica, cobrindo
-microsserviços, bancos, integração assíncrona, pagamento Pix, segurança de
-borda, observabilidade e decisões arquiteturais.
-</p>
-<div aria-label="Tecnologias principais" class="oficina-pill-row">
-  <span>Microsserviços</span>
-  <span>AWS</span>
-  <span>K3s</span>
-  <span>SQS</span>
-  <span>RDS SQL Server</span>
-  <span>DynamoDB</span>
-  <span>Pagamento Pix</span>
-</div>
-</div>
-<div class="oficina-summary">
-<section class="oficina-panel">
-<h2 id="resumo-da-arquitetura">Resumo da arquitetura<a class="headerlink" href="#resumo-da-arquitetura" title="Link permanente para esta seção">&para;</a></h2>
-<p>A solução é dividida por contexto de negócio: Cadastro, Estoque, Ordens de
-Serviço, Pagamento e Autenticação. A entrada pública passa pelo API Gateway, a
-execução principal ocorre em serviços .NET no K3s, e o pagamento Pix roda em
-Lambda integrada por SQS, EventBridge, DynamoDB e Mercado Pago.</p>
-<p>Ordens de Serviço coordena a saga de aprovação do orçamento, confirmação do
-pagamento e reserva de estoque, mantendo rastreabilidade por estado local,
-snapshots, Inbox, Outbox e mensagens correlacionadas.</p>
-</section>
-<aside class="oficina-panel">
-<h2 id="leitura-sugerida">Leitura sugerida<a class="headerlink" href="#leitura-sugerida" title="Link permanente para esta seção">&para;</a></h2>
-<ol>
-<li><a href="arquitetura/visao-geral/">Visão geral</a></li>
-<li><a href="arquitetura/componentes/">Componentes</a></li>
-<li><a href="arquitetura/microsservicos-tecnologias/">Microsserviços e tecnologias</a></li>
-<li><a href="arquitetura/comunicacao-integracao/">Comunicação e integração</a></li>
-<li><a href="fluxos/sequencia-criacao-os/">Criação da Ordem de Serviço</a></li>
-<li><a href="fluxos/saga-pattern/">Saga Pattern</a></li>
-<li><a href="fluxos/bancos-er/">Bancos de dados</a></li>
-<li><a href="decisoes/adrs/">ADRs</a></li>
-<li><a href="decisoes/rfcs/">RFCs</a></li>
-<li><a href="decisoes/limitacoes-aws-academy/">Limitações do AWS Academy</a></li>
-</ol>
-</aside>
-</div>
-<h2 id="navegacao">Navegação<a class="headerlink" href="#navegacao" title="Link permanente para esta seção">&para;</a></h2>
-<div class="oficina-nav-grid">
-  <a class="oficina-card" href="arquitetura/visao-geral/">
-    <div>
-      <h3>Arquitetura</h3>
-      <p>
-        Visão geral da solução, componentes internos, divisão dos microsserviços,
-        tecnologias e comunicação entre serviços.
-      </p>
-    </div>
-    <span class="oficina-card__action">Abrir arquitetura</span>
-  </a>
-
-  <a class="oficina-card" href="fluxos/sequencia-criacao-os/">
-    <div>
-      <h3>Fluxos</h3>
-      <p>
-        Criação da Ordem de Serviço, Saga Pattern, integração com pagamento e
-        modelos de dados dos bancos.
-      </p>
-    </div>
-    <span class="oficina-card__action">Abrir fluxos</span>
-  </a>
-
-  <a class="oficina-card" href="decisoes/adrs/">
-    <div>
-      <h3>Decisões</h3>
-      <p>
-        ADRs, RFCs e restrições do AWS Academy que influenciaram escolhas de
-        implementação e operação.
-      </p>
-    </div>
-    <span class="oficina-card__action">Abrir decisões</span>
-  </a>
-</div>
-
-<h2 id="componentes-principais">Componentes principais<a class="headerlink" href="#componentes-principais" title="Link permanente para esta seção">&para;</a></h2>
-<div class="oficina-component-grid">
-  <article class="oficina-component-card">
-    <h3>API Gateway e Auth</h3>
-    <p><strong>Borda pública.</strong> Login por CPF, authorizer JWT e VPC Link para o ALB interno.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Cadastro</h3>
-    <p><strong>Dados mestres.</strong> Clientes, veículos, funcionários e catálogo de serviços.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Estoque</h3>
-    <p><strong>Materiais.</strong> Peças, insumos, saldos, movimentações e reservas por SQS FIFO.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Ordens de Serviço</h3>
-    <p><strong>Processo central.</strong> OS, orçamento, pagamentos lógicos, relatórios e saga.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Pagamento</h3>
-    <p><strong>Pix serverless.</strong> Lambda Python, SQS, EventBridge, DynamoDB e Mercado Pago.</p>
-  </article>
-  <article class="oficina-component-card">
-    <h3>Observabilidade</h3>
-    <p><strong>Rastreabilidade.</strong> Correlation ID, OpenTelemetry, CloudWatch e New Relic.</p>
-  </article>
-</div>
-
-<h2 id="entregaveis-da-arquitetura">Entregáveis da arquitetura<a class="headerlink" href="#entregaveis-da-arquitetura" title="Link permanente para esta seção">&para;</a></h2>
+<h1 id="adrs">ADRs<a class="headerlink" href="#adrs" title="Link permanente para esta seção">&para;</a></h1>
 <table>
 <thead>
 <tr>
-<th>Entregável obrigatório</th>
-<th>Localização</th>
+<th>Decisão</th>
+<th>Assunto</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Diagrama geral da arquitetura</td>
-<td><a href="arquitetura/visao-geral/">Arquitetura → Visão geral</a></td>
+<td><a href="#adr-001">ADR-001</a></td>
+<td>Dividir a solução por bounded context</td>
+<td>Aceita</td>
 </tr>
 <tr>
-<td>Diagrama de componentes</td>
-<td><a href="arquitetura/componentes/">Arquitetura → Componentes</a></td>
+<td><a href="#adr-002">ADR-002</a></td>
+<td>Usar banco exclusivo por microsserviço no mesmo RDS</td>
+<td>Aceita</td>
 </tr>
 <tr>
-<td>Diagrama de sequência</td>
-<td><a href="fluxos/sequencia-criacao-os/">Fluxos → Criação da Ordem de Serviço</a></td>
+<td><a href="#adr-003">ADR-003</a></td>
+<td>Usar DynamoDB para Pagamento</td>
+<td>Aceita</td>
 </tr>
 <tr>
-<td>Diagrama de bancos de dados (ER)</td>
-<td><a href="fluxos/bancos-er/">Fluxos → Bancos de dados</a></td>
+<td><a href="#adr-004">ADR-004</a></td>
+<td>Executar os microsserviços .NET em K3s single-node</td>
+<td>Aceita</td>
 </tr>
 <tr>
-<td>Comunicação e integração</td>
-<td><a href="arquitetura/comunicacao-integracao/">Arquitetura → Comunicação e integração</a></td>
+<td><a href="#adr-005">ADR-005</a></td>
+<td>Executar Pagamento como Lambda serverless</td>
+<td>Aceita</td>
 </tr>
 <tr>
-<td>Divisão dos microsserviços</td>
-<td><a href="arquitetura/microsservicos-tecnologias/">Arquitetura → Microsserviços e tecnologias</a></td>
+<td><a href="#adr-006">ADR-006</a></td>
+<td>Usar Saga orquestrada, com o orquestrador embarcado em Ordens de Serviço</td>
+<td>Aceita</td>
 </tr>
 <tr>
-<td>Tecnologias utilizadas</td>
-<td><a href="arquitetura/microsservicos-tecnologias/">Arquitetura → Microsserviços e tecnologias</a></td>
+<td><a href="#adr-007">ADR-007</a></td>
+<td>Aplicar Outbox e Inbox na saga Ordens/Estoque</td>
+<td>Aceita</td>
 </tr>
 <tr>
-<td>Saga Pattern e estratégia adotada</td>
-<td><a href="fluxos/saga-pattern/">Fluxos → Saga Pattern</a></td>
+<td><a href="#adr-008">ADR-008</a></td>
+<td>Usar SQS para integrar Ordens e Pagamento</td>
+<td>Aceita</td>
 </tr>
 <tr>
-<td>ADRs</td>
-<td><a href="decisoes/adrs/">Decisões → ADRs</a></td>
+<td><a href="#adr-009">ADR-009</a></td>
+<td>Usar polling do Mercado Pago em vez de webhook</td>
+<td>Aceita</td>
 </tr>
 <tr>
-<td>RFCs</td>
-<td><a href="decisoes/rfcs/">Decisões → RFCs</a></td>
+<td><a href="#adr-010">ADR-010</a></td>
+<td>Usar Lambda authorizer e login por CPF</td>
+<td>Aceita</td>
+</tr>
+<tr>
+<td><a href="#adr-011">ADR-011</a></td>
+<td>Provisionar infraestrutura com Terraform e CI/CD independente</td>
+<td>Aceita</td>
+</tr>
+<tr>
+<td><a href="#adr-012">ADR-012</a></td>
+<td>Preparar observabilidade com OpenTelemetry e New Relic fail-open</td>
+<td>Aceita</td>
 </tr>
 </tbody>
 </table>
-<h2 id="repositorios-da-solucao">Repositórios da solução<a class="headerlink" href="#repositorios-da-solucao" title="Link permanente para esta seção">&para;</a></h2>
-<div class="oficina-repos">
-<table>
-<thead>
-<tr>
-<th>Repositório</th>
-<th>Responsabilidade</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-infra-db-fiap-fase4"><code>oficina-infra-db</code></a></td>
-<td>Rede privada, banco de dados relacional, segredos e estado do Terraform compartilhado</td>
-</tr>
-<tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-infra-fiap-fase4"><code>oficina-infra</code></a></td>
-<td>Plataforma Kubernetes, ALB interno, entrada pública da API e observabilidade</td>
-</tr>
-<tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-auth-lambda-fiap-fase4"><code>oficina-auth-lambda</code></a></td>
-<td>Login por CPF e validação de token na borda</td>
-</tr>
-<tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-cadastro-fiap-fase4"><code>oficina-cadastro</code></a></td>
-<td>Clientes, veículos, funcionários e catálogo de serviços</td>
-</tr>
-<tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-estoque-fiap-fase4"><code>oficina-estoque</code></a></td>
-<td>Peças, insumos, saldos e reservas</td>
-</tr>
-<tr>
-<td><a href="https://github.com/fabianorodrigues/oficina-ordens-servico-fiap-fase4"><code>oficina-ordens-servico</code></a></td>
-<td>Ordens de serviço, orçamento e coordenação da saga</td>
-</tr>
-<tr>
-<td><a href="https://github.com/jaquelineramosit/oficina-app-pagamento"><code>oficina-app-pagamento</code></a></td>
-<td>Lambda de pagamento Pix, integrada ao Mercado Pago</td>
-</tr>
-<tr>
-<td><a href="https://github.com/jaquelineramosit/oficina-infra-pagamento"><code>oficina-infra-pagamento</code></a></td>
-<td>Filas SQS e tabela DynamoDB do domínio de pagamento</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>O provisionamento segue uma ordem de dependência: infraestrutura de dados,
-plataforma Kubernetes, autenticação, Cadastro, Estoque, Ordens de Serviço,
-entrada pública da API e, por fim, observabilidade. Detalhes em
-<a href="arquitetura/comunicacao-integracao/">Comunicação e integração</a>.</p>
+<h2 id="adr-001">ADR-001 — Dividir a solução por bounded context<a class="headerlink" href="#adr-001" title="Link permanente para esta seção">&para;</a></h2>
+<p><strong>Status:</strong> Aceita</p>
+<p><strong>Contexto.</strong> A solução da Oficina possui domínios com regras diferentes:
+cadastro de dados mestres, controle de estoque, ciclo de vida de ordens de
+serviço e pagamento externo.</p>
+<p><strong>Decisão.</strong> Dividir em microsserviços por contexto: Cadastro, Estoque,
+Ordens de Serviço e Pagamento. A autenticação fica em Lambdas separadas, por
+ser responsabilidade da borda.</p>
+<p><strong>Consequências.</strong> Cada contexto evolui modelo e banco de forma
+independente. Integrações passam por contratos HTTP ou eventos. A solução
+exige mais automação, observabilidade e tratamento de falhas distribuídas.</p>
+<h2 id="adr-002">ADR-002 — Usar banco exclusivo por microsserviço no mesmo RDS<a class="headerlink" href="#adr-002" title="Link permanente para esta seção">&para;</a></h2>
+<p><strong>Status:</strong> Aceita</p>
+<p><strong>Contexto.</strong> O requisito pede separação de dados por microsserviço, mas a
+entrega também precisa controlar custo e complexidade operacional.</p>
+<p><strong>Decisão.</strong> Usar um RDS SQL Server compartilhado como servidor e três
+bancos lógicos: <code>OficinaCadastroDb</code>, <code>OficinaEstoqueDb</code> e
+<code>OficinaOrdensServicoDb</code>. Cada serviço recebe logins próprios de runtime e
+de migration.</p>
+<p><strong>Consequências.</strong> Isolamento de schema e de credencial sem multiplicar
+instâncias de RDS. Uma falha no servidor RDS afeta os três serviços .NET.
+Não há foreign key física entre contextos; referências externas são
+lógicas.</p>
+<h2 id="adr-003">ADR-003 — Usar DynamoDB para Pagamento<a class="headerlink" href="#adr-003" title="Link permanente para esta seção">&para;</a></h2>
+<p><strong>Status:</strong> Aceita</p>
+<p><strong>Contexto.</strong> O serviço de Pagamento roda em Lambda e precisa salvar o
+estado das orders Pix para o polling e para rastreabilidade.</p>
+<p><strong>Decisão.</strong> Usar a tabela DynamoDB <code>orders</code>, com chave primária
+<code>order_id</code>.</p>
+<p><strong>Consequências.</strong> A Lambda não precisa gerenciar pool de conexões SQL. A
+persistência escala conforme a demanda e simplifica a operação. Consultas
+por status hoje usam varredura; volume maior exigirá um índice secundário
+por <code>status</code>.</p>
+<h2 id="adr-004">ADR-004 — Executar os microsserviços .NET em K3s single-node<a class="headerlink" href="#adr-004" title="Link permanente para esta seção">&para;</a></h2>
+<p><strong>Status:</strong> Aceita</p>
+<p><strong>Contexto.</strong> A entrega precisa demonstrar deploy em Kubernetes na AWS, com
+custo e operação controlados.</p>
+<p><strong>Decisão.</strong> Executar K3s single-node em uma EC2 privada, atrás de ALB
+interno e API Gateway com VPC Link.</p>
+<p><strong>Consequências.</strong> Atende ao modelo Kubernetes, com manifests, Services e
+Jobs de migration. Reduz custo e complexidade em relação a um cluster
+gerenciado completo. Não entrega alta disponibilidade.</p>
+<h2 id="adr-005">ADR-005 — Executar Pagamento como Lambda serverless<a class="headerlink" href="#adr-005" title="Link permanente para esta seção">&para;</a></h2>
+<p><strong>Status:</strong> Aceita</p>
+<p><strong>Contexto.</strong> Pagamento é uma carga orientada a filas e a polling, com
+chamadas externas ao Mercado Pago e sem necessidade de API HTTP pública
+própria.</p>
+<p><strong>Decisão.</strong> Executar <code>oficina-pagamento</code> como AWS Lambda em Python 3.12,
+acionada por SQS e por EventBridge.</p>
+<p><strong>Consequências.</strong> Escala por volume de mensagens. Reduz custo ocioso.
+Separa credenciais e dependências do Mercado Pago do núcleo da OS. Não
+segue o mesmo modelo K3s dos serviços .NET, por decisão arquitetural.</p>
+<h2 id="adr-006">ADR-006 — Usar Saga orquestrada, com o orquestrador embarcado em Ordens de Serviço<a class="headerlink" href="#adr-006" title="Link permanente para esta seção">&para;</a></h2>
+<p><strong>Status:</strong> Aceita</p>
+<p><strong>Contexto.</strong> A aprovação do orçamento envolve pagamento e reserva de
+estoque, cada um com seu próprio dado e falhas possíveis. Um dos
+participantes precisa manter o estado do processo e decidir os próximos
+passos.</p>
+<p><strong>Decisão.</strong> Usar Saga orquestrada. Ordens de Serviço mantém o estado local
+em <code>SagasOrdensServico</code>, publica comandos explícitos para os demais
+participantes e audita cada transição em <code>SagaSnapshots</code>.</p>
+<p><strong>Consequências.</strong> Evita transação distribuída. Dá à OS uma fonte única e
+auditável do estado do processo, necessária para suporte e relatórios.
+Concentra a lógica de coordenação em Ordens, que se torna uma dependência
+para o avanço da saga — mitigado por Outbox, Inbox e DLQ.</p>
+<h2 id="adr-007">ADR-007 — Aplicar Outbox e Inbox na saga Ordens/Estoque<a class="headerlink" href="#adr-007" title="Link permanente para esta seção">&para;</a></h2>
+<p><strong>Status:</strong> Aceita</p>
+<p><strong>Contexto.</strong> Publicar uma mensagem e gravar um dado de negócio são
+operações diferentes. Falhas entre essas etapas poderiam perder um evento
+ou duplicar um efeito.</p>
+<p><strong>Decisão.</strong> Aplicar Outbox para publicação confiável e Inbox com índice
+único por <code>MessageId</code> para idempotência.</p>
+<p><strong>Consequências.</strong> Mensagens só saem depois do commit local. Reentrega do
+SQS não duplica reserva nem transição de saga. Existem tabelas operacionais
+adicionais em Ordens e em Estoque.</p>
+<h2 id="adr-008">ADR-008 — Usar SQS para integrar Ordens e Pagamento<a class="headerlink" href="#adr-008" title="Link permanente para esta seção">&para;</a></h2>
+<p><strong>Status:</strong> Aceita</p>
+<p><strong>Contexto.</strong> Ordens precisa acionar a criação de um Pix e receber o
+resultado, sem se acoplar diretamente ao Mercado Pago.</p>
+<p><strong>Decisão.</strong> Ordens publica solicitações em <code>sqs-pagamento-solicitar</code> e
+consome resultados de <code>sqs-pagamento-efetuado</code> e <code>sqs-pagamento-recusado</code>.</p>
+<p><strong>Consequências.</strong> Ordens não conhece os detalhes da Orders API do Mercado
+Pago. Pagamento pode reprocessar mensagens com idempotência por
+<code>external_reference</code>. A integração depende do provisionamento e da
+operação contínua do participante de Pagamento.</p>
+<h2 id="adr-009">ADR-009 — Usar polling do Mercado Pago em vez de webhook<a class="headerlink" href="#adr-009" title="Link permanente para esta seção">&para;</a></h2>
+<p><strong>Status:</strong> Aceita</p>
+<p><strong>Contexto.</strong> Expor um webhook público exige rota, autenticação de
+assinatura, proteção contra payload malicioso e tratamento de reentrância.</p>
+<p><strong>Decisão.</strong> Usar EventBridge para acionar o polling periódico da Lambda,
+que consulta o status das orders pendentes no Mercado Pago.</p>
+<p><strong>Consequências.</strong> Não há endpoint HTTP público para o provedor externo. A
+confirmação do pagamento tem latência até a próxima execução do polling. O
+intervalo é controlado por Terraform e, no ambiente AWS Academy, ficou em
+10 minutos — ver <a href="../limitacoes-aws-academy/">Limitações do AWS Academy</a>.</p>
+<h2 id="adr-010">ADR-010 — Usar Lambda authorizer e login por CPF<a class="headerlink" href="#adr-010" title="Link permanente para esta seção">&para;</a></h2>
+<p><strong>Status:</strong> Aceita</p>
+<p><strong>Contexto.</strong> A API pública precisa autenticar usuários antes de atingir os
+microsserviços. O login por CPF depende da tabela de funcionários mantida
+pelo Cadastro.</p>
+<p><strong>Decisão.</strong> Usar duas Lambdas: <code>auth-cpf</code>, para validar CPF/senha e emitir
+o JWT, e <code>authorizer</code>, para validar o JWT nas rotas protegidas.</p>
+<p><strong>Consequências.</strong> A autenticação fica na borda. Os serviços recebem
+identidade confiável por cabeçalhos. <code>auth-cpf</code> acessa <code>OficinaCadastroDb</code>
+com um login somente leitura dedicado.</p>
+<h2 id="adr-011">ADR-011 — Provisionar infraestrutura com Terraform e CI/CD independente<a class="headerlink" href="#adr-011" title="Link permanente para esta seção">&para;</a></h2>
+<p><strong>Status:</strong> Aceita</p>
+<p><strong>Contexto.</strong> A solução está distribuída em repositórios independentes e
+precisa de provisionamento reprodutível.</p>
+<p><strong>Decisão.</strong> Usar Terraform para infraestrutura e GitHub Actions para
+CI/CD por repositório. Imagens e pacotes são gerados por execução de
+pipeline.</p>
+<p><strong>Consequências.</strong> Mudanças ficam versionadas e auditáveis. O deploy de
+cada serviço executa suas próprias validações. A ordem de provisionamento
+precisa respeitar as dependências entre infraestrutura, banco, filas e
+aplicações.</p>
+<h2 id="adr-012">ADR-012 — Preparar observabilidade com OpenTelemetry e New Relic fail-open<a class="headerlink" href="#adr-012" title="Link permanente para esta seção">&para;</a></h2>
+<p><strong>Status:</strong> Aceita</p>
+<p><strong>Contexto.</strong> Falhas distribuídas precisam ser investigáveis por logs,
+traces e correlação, mas a telemetria não pode indisponibilizar a
+aplicação.</p>
+<p><strong>Decisão.</strong> Instrumentar as APIs com OpenTelemetry, propagar um
+<code>correlationId</code> e exportar para o New Relic quando configurado. O
+exportador deve ser fail-open.</p>
+<p><strong>Consequências.</strong> O New Relic pode ser ativado sem mudar código de
+negócio. Falha do endpoint de exportação não derruba requisições. A equipe
+ainda precisa configurar licença, painéis e alertas.</p>
 
 
 
@@ -1341,15 +1470,31 @@ entrada pública da API e, por fim, observabilidade. Detalhes em
       
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
+          
+          <a href="../../fluxos/bancos-er/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Bancos de dados">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Bancos de dados
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="arquitetura/visao-geral/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Visão geral">
+          <a href="../rfcs/" class="md-footer__link md-footer__link--next" aria-label="Próximo: RFCs">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                Visão geral
+                RFCs
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1405,14 +1550,14 @@ entrada pública da API e, por fim, observabilidade. Detalhes em
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.top", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips", "content.action.edit"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.top", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="javascripts/diagram-viewer.js"></script>
+        <script src="../../javascripts/diagram-viewer.js"></script>
       
-        <script src="javascripts/mermaid-setup.js"></script>
+        <script src="../../javascripts/mermaid-setup.js"></script>
       
     
   </body>

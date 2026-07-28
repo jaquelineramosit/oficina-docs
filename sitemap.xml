@@ -2,34 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jaquelineramosit.github.io/oficina-docs/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-         <loc>https://jaquelineramosit.github.io/oficina-docs/01-arquitetura-final/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <loc>https://jaquelineramosit.github.io/oficina-docs/arquitetura/componentes/</loc>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-         <loc>https://jaquelineramosit.github.io/oficina-docs/02-saga-pattern/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <loc>https://jaquelineramosit.github.io/oficina-docs/arquitetura/comunicacao-integracao/</loc>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-         <loc>https://jaquelineramosit.github.io/oficina-docs/03-divisao-microsservicos-tecnologias/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <loc>https://jaquelineramosit.github.io/oficina-docs/arquitetura/microsservicos-tecnologias/</loc>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-         <loc>https://jaquelineramosit.github.io/oficina-docs/04-sequencia-criacao-os/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <loc>https://jaquelineramosit.github.io/oficina-docs/arquitetura/visao-geral/</loc>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-         <loc>https://jaquelineramosit.github.io/oficina-docs/05-diagrama-er-bancos/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <loc>https://jaquelineramosit.github.io/oficina-docs/decisoes/adrs/</loc>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-         <loc>https://jaquelineramosit.github.io/oficina-docs/06-rfcs/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <loc>https://jaquelineramosit.github.io/oficina-docs/decisoes/limitacoes-aws-academy/</loc>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-         <loc>https://jaquelineramosit.github.io/oficina-docs/07-adrs/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <loc>https://jaquelineramosit.github.io/oficina-docs/decisoes/rfcs/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://jaquelineramosit.github.io/oficina-docs/fluxos/bancos-er/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://jaquelineramosit.github.io/oficina-docs/fluxos/saga-pattern/</loc>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://jaquelineramosit.github.io/oficina-docs/fluxos/sequencia-criacao-os/</loc>
+         <lastmod>2026-07-28</lastmod>
     </url>
 </urlset>
