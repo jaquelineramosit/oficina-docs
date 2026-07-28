@@ -1,7 +1,5 @@
-# Build local do MkDocs
-site/
-
-# Ambientes virtuais Python
-.venv/
-venv/
-__pycache__/
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/oficina-docs.slnx/FileContentIndex/c95e48ef-da53-45e5-9b24-a7eb65e2b97d.vsidx
+.vs/oficina-docs.slnx/v18/.wsuo
+.vs/oficina-docs.slnx/v18/DocumentLayout.json
