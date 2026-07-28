@@ -6,22 +6,29 @@ repo_url: https://github.com/jaquelineramosit/oficina-docs
 repo_name: jaquelineramosit/oficina-docs
 edit_uri: edit/main/docs/
 
+copyright: Pós-graduação em Arquitetura de Software — FIAP, Fase 4
+
 theme:
   name: material
   language: pt-BR
+  icon:
+    logo: material/sitemap-outline
+    repo: fontawesome/brands/github
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: blue grey
       accent: teal
       toggle:
         icon: material/weather-night
-        name: Modo escuro
-    - scheme: slate
+        name: Mudar para o modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: blue grey
       accent: teal
       toggle:
         icon: material/weather-sunny
-        name: Modo claro
+        name: Mudar para o modo claro
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -37,6 +44,7 @@ theme:
     - search.highlight
     - search.share
     - content.code.copy
+    - content.tooltips
     - content.action.edit
 
 nav:
@@ -56,6 +64,7 @@ nav:
       - Limitações do AWS Academy: decisoes/limitacoes-aws-academy.md
 
 markdown_extensions:
+  - abbr
   - admonition
   - attr_list
   - md_in_html
@@ -63,6 +72,7 @@ markdown_extensions:
   - footnotes
   - toc:
       permalink: true
+      permalink_title: Link permanente para esta seção
       toc_depth: 3
   - pymdownx.details
   - pymdownx.highlight:
@@ -80,6 +90,16 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/diagram-viewer.js
+  - javascripts/mermaid-setup.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jaquelineramosit/oficina-docs
+      name: Repositório da documentação no GitHub
 
 plugins:
   - search:

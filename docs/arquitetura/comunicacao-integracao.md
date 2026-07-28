@@ -158,9 +158,11 @@ flowchart TB
     style RETORNO_PIX fill:#F6F8FB,stroke:#D9E1EA,stroke-width:2px
 ```
 
-O status `efetuado` significa "cobrança Pix criada", não "pagamento
-confirmado". A saga permanece aguardando até o polling identificar a order
-como processada no Mercado Pago e publicar o status `pago`.
+!!! note "Sobre o status `efetuado`"
+
+    O status `efetuado` significa "cobrança Pix criada", não "pagamento
+    confirmado". A saga permanece aguardando até o polling identificar a order
+    como processada no Mercado Pago e publicar o status `pago`.
 
 ## Contratos de mensagem
 

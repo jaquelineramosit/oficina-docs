@@ -1,6 +1,21 @@
 # ADRs
 
-## ADR-001 — Dividir a solução por bounded context
+| Decisão | Assunto | Status |
+|---|---|---|
+| [ADR-001](#adr-001) | Dividir a solução por bounded context | Aceita |
+| [ADR-002](#adr-002) | Usar banco exclusivo por microsserviço no mesmo RDS | Aceita |
+| [ADR-003](#adr-003) | Usar DynamoDB para Pagamento | Aceita |
+| [ADR-004](#adr-004) | Executar os microsserviços .NET em K3s single-node | Aceita |
+| [ADR-005](#adr-005) | Executar Pagamento como Lambda serverless | Aceita |
+| [ADR-006](#adr-006) | Usar Saga orquestrada, com o orquestrador embarcado em Ordens de Serviço | Aceita |
+| [ADR-007](#adr-007) | Aplicar Outbox e Inbox na saga Ordens/Estoque | Aceita |
+| [ADR-008](#adr-008) | Usar SQS para integrar Ordens e Pagamento | Aceita |
+| [ADR-009](#adr-009) | Usar polling do Mercado Pago em vez de webhook | Aceita |
+| [ADR-010](#adr-010) | Usar Lambda authorizer e login por CPF | Aceita |
+| [ADR-011](#adr-011) | Provisionar infraestrutura com Terraform e CI/CD independente | Aceita |
+| [ADR-012](#adr-012) | Preparar observabilidade com OpenTelemetry e New Relic fail-open | Aceita |
+
+## ADR-001 — Dividir a solução por bounded context { #adr-001 }
 
 **Status:** Aceita
 
@@ -16,7 +31,7 @@ ser responsabilidade da borda.
 independente. Integrações passam por contratos HTTP ou eventos. A solução
 exige mais automação, observabilidade e tratamento de falhas distribuídas.
 
-## ADR-002 — Usar banco exclusivo por microsserviço no mesmo RDS
+## ADR-002 — Usar banco exclusivo por microsserviço no mesmo RDS { #adr-002 }
 
 **Status:** Aceita
 
@@ -33,7 +48,7 @@ instâncias de RDS. Uma falha no servidor RDS afeta os três serviços .NET.
 Não há foreign key física entre contextos; referências externas são
 lógicas.
 
-## ADR-003 — Usar DynamoDB para Pagamento
+## ADR-003 — Usar DynamoDB para Pagamento { #adr-003 }
 
 **Status:** Aceita
 
@@ -48,7 +63,7 @@ persistência escala conforme a demanda e simplifica a operação. Consultas
 por status hoje usam varredura; volume maior exigirá um índice secundário
 por `status`.
 
-## ADR-004 — Executar os microsserviços .NET em K3s single-node
+## ADR-004 — Executar os microsserviços .NET em K3s single-node { #adr-004 }
 
 **Status:** Aceita
 
@@ -62,7 +77,7 @@ interno e API Gateway com VPC Link.
 Jobs de migration. Reduz custo e complexidade em relação a um cluster
 gerenciado completo. Não entrega alta disponibilidade.
 
-## ADR-005 — Executar Pagamento como Lambda serverless
+## ADR-005 — Executar Pagamento como Lambda serverless { #adr-005 }
 
 **Status:** Aceita
 
@@ -77,7 +92,7 @@ acionada por SQS e por EventBridge.
 Separa credenciais e dependências do Mercado Pago do núcleo da OS. Não
 segue o mesmo modelo K3s dos serviços .NET, por decisão arquitetural.
 
-## ADR-006 — Usar Saga orquestrada, com o orquestrador embarcado em Ordens de Serviço
+## ADR-006 — Usar Saga orquestrada, com o orquestrador embarcado em Ordens de Serviço { #adr-006 }
 
 **Status:** Aceita
 
@@ -95,7 +110,7 @@ auditável do estado do processo, necessária para suporte e relatórios.
 Concentra a lógica de coordenação em Ordens, que se torna uma dependência
 para o avanço da saga — mitigado por Outbox, Inbox e DLQ.
 
-## ADR-007 — Aplicar Outbox e Inbox na saga Ordens/Estoque
+## ADR-007 — Aplicar Outbox e Inbox na saga Ordens/Estoque { #adr-007 }
 
 **Status:** Aceita
 
@@ -110,7 +125,7 @@ ou duplicar um efeito.
 SQS não duplica reserva nem transição de saga. Existem tabelas operacionais
 adicionais em Ordens e em Estoque.
 
-## ADR-008 — Usar SQS para integrar Ordens e Pagamento
+## ADR-008 — Usar SQS para integrar Ordens e Pagamento { #adr-008 }
 
 **Status:** Aceita
 
@@ -125,7 +140,7 @@ Pago. Pagamento pode reprocessar mensagens com idempotência por
 `external_reference`. A integração depende do provisionamento e da
 operação contínua do participante de Pagamento.
 
-## ADR-009 — Usar polling do Mercado Pago em vez de webhook
+## ADR-009 — Usar polling do Mercado Pago em vez de webhook { #adr-009 }
 
 **Status:** Aceita
 
@@ -139,7 +154,7 @@ que consulta o status das orders pendentes no Mercado Pago.
 confirmação do pagamento tem latência até a próxima execução do polling. O
 intervalo é controlado por Terraform.
 
-## ADR-010 — Usar Lambda authorizer e login por CPF
+## ADR-010 — Usar Lambda authorizer e login por CPF { #adr-010 }
 
 **Status:** Aceita
 
@@ -154,7 +169,7 @@ o JWT, e `authorizer`, para validar o JWT nas rotas protegidas.
 identidade confiável por cabeçalhos. `auth-cpf` acessa `OficinaCadastroDb`
 com um login somente leitura dedicado.
 
-## ADR-011 — Provisionar infraestrutura com Terraform e CI/CD independente
+## ADR-011 — Provisionar infraestrutura com Terraform e CI/CD independente { #adr-011 }
 
 **Status:** Aceita
 
@@ -170,7 +185,7 @@ cada serviço executa suas próprias validações. A ordem de provisionamento
 precisa respeitar as dependências entre infraestrutura, banco, filas e
 aplicações.
 
-## ADR-012 — Preparar observabilidade com OpenTelemetry e New Relic fail-open
+## ADR-012 — Preparar observabilidade com OpenTelemetry e New Relic fail-open { #adr-012 }
 
 **Status:** Aceita
 

@@ -1,6 +1,16 @@
 # RFCs
 
-## RFC-001 — Entrada pública e roteamento
+| Proposta | Assunto | Status |
+|---|---|---|
+| [RFC-001](#rfc-001) | Entrada pública e roteamento | Aceita |
+| [RFC-002](#rfc-002) | Identidade confiável entre borda e microsserviços | Aceita |
+| [RFC-003](#rfc-003) | Criação da ordem de serviço | Aceita |
+| [RFC-004](#rfc-004) | Mensageria da saga Ordens/Estoque | Aceita |
+| [RFC-005](#rfc-005) | Integração com Pagamento Pix | Aceita |
+| [RFC-006](#rfc-006) | Isolamento de dados e migrations | Aceita |
+| [RFC-007](#rfc-007) | Observabilidade | Proposta aceita, para ativação por configuração |
+
+## RFC-001 — Entrada pública e roteamento { #rfc-001 }
 
 **Status:** Aceita
 
@@ -30,7 +40,7 @@ roteamento por path para os serviços no K3s.
 - O ALB é interno.
 - Rotas protegidas recebem identidade somente via authorizer.
 
-## RFC-002 — Identidade confiável entre borda e microsserviços
+## RFC-002 — Identidade confiável entre borda e microsserviços { #rfc-002 }
 
 **Status:** Aceita
 
@@ -47,7 +57,7 @@ CPF, perfil, nome e identificador do token.
 - Rotas públicas removem cabeçalhos de identidade enviados pelo cliente.
 - Os serviços materializam os cabeçalhos como claims internas.
 
-## RFC-003 — Criação da ordem de serviço
+## RFC-003 — Criação da ordem de serviço { #rfc-003 }
 
 **Status:** Aceita
 
@@ -67,7 +77,7 @@ consulta Cadastro e Estoque via rotas internas e persiste a OS em
 - A criação da OS não inicia pagamento nem reserva.
 - A saga inicia apenas na aprovação do orçamento.
 
-## RFC-004 — Mensageria da saga Ordens/Estoque
+## RFC-004 — Mensageria da saga Ordens/Estoque { #rfc-004 }
 
 **Status:** Aceita
 
@@ -93,7 +103,7 @@ Cada mensagem usa um envelope com `messageId`, `messageType`,
 - O Outbox publica somente depois do commit local.
 - Toda fila principal tem uma DLQ.
 
-## RFC-005 — Integração com Pagamento Pix
+## RFC-005 — Integração com Pagamento Pix { #rfc-005 }
 
 **Status:** Aceita
 
@@ -135,11 +145,13 @@ usados pelo fluxo de Pix.
 - O status `efetuado` não é tratado como pagamento aprovado.
 - Apenas o status `pago` move a saga para `PagamentoAprovado`.
 
-> O status **Aceita** representa a aprovação da proposta arquitetural, dos
-> contratos e do fluxo definido — não é comprovação de implantação ou de
-> validação completa junto ao provedor externo.
+!!! info "Alcance do status Aceita"
 
-## RFC-006 — Isolamento de dados e migrations
+    O status **Aceita** representa a aprovação da proposta arquitetural, dos
+    contratos e do fluxo definido — não é comprovação de implantação ou de
+    validação completa junto ao provedor externo.
+
+## RFC-006 — Isolamento de dados e migrations { #rfc-006 }
 
 **Status:** Aceita
 
@@ -168,7 +180,7 @@ por Terraform separado.
 - A tabela DynamoDB de pagamento é criada pelo repositório de infraestrutura
   de pagamento.
 
-## RFC-007 — Observabilidade
+## RFC-007 — Observabilidade { #rfc-007 }
 
 **Status:** Proposta aceita, para ativação por configuração
 

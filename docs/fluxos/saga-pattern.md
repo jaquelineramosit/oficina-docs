@@ -128,9 +128,11 @@ flowchart TB
     style POLLING fill:#F3FAF8,stroke:#B7DCD6,stroke-width:2px
 ```
 
-O status `efetuado` significa "cobrança Pix criada", não "pagamento
-confirmado". A saga permanece em `PagamentoPendente` até o polling
-identificar a order como processada e a Lambda publicar o status `pago`.
+!!! note "Sobre o status `efetuado`"
+
+    O status `efetuado` significa "cobrança Pix criada", não "pagamento
+    confirmado". A saga permanece em `PagamentoPendente` até o polling
+    identificar a order como processada e a Lambda publicar o status `pago`.
 
 ### Parte 2 — Reserva de estoque
 
