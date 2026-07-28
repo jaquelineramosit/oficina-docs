@@ -152,7 +152,8 @@ que consulta o status das orders pendentes no Mercado Pago.
 
 **Consequências.** Não há endpoint HTTP público para o provedor externo. A
 confirmação do pagamento tem latência até a próxima execução do polling. O
-intervalo é controlado por Terraform.
+intervalo é controlado por Terraform e, no ambiente AWS Academy, ficou em
+10 minutos — ver [Limitações do AWS Academy](limitacoes-aws-academy.md).
 
 ## ADR-010 — Usar Lambda authorizer e login por CPF { #adr-010 }
 

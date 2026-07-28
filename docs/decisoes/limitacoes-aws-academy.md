@@ -15,6 +15,7 @@ adaptações em relação à arquitetura inicialmente planejada.
 | IRSA / EKS Pod Identity | Instance profile da EC2 para a identidade dos workloads | Mecanismos de identidade do EKS não se aplicam fora dele |
 | AWS Load Balancer Controller | Services `NodePort`, integrados ao ALB interno por target group | Simplifica a integração sem depender de um controller adicional no cluster |
 | Recursos de observabilidade do New Relic via Terraform | Provisionamento idempotente fora do Terraform | Reduz conflito com recursos preexistentes e limitações de gerenciamento do ambiente |
+| Polling do Mercado Pago em intervalo curto | Regra do EventBridge agendada a cada 10 minutos | Reduz o volume de invocações da Lambda e de chamadas ao provedor externo dentro das cotas e da instabilidade do laboratório |
 
 ## Continuidade durante a indisponibilidade
 
@@ -37,6 +38,21 @@ O domínio de Ordens de Serviço permanece desacoplado do mecanismo de
 pagamento por contratos e interfaces, o que permite concluir a integração
 posteriormente sem alterações significativas nas regras de negócio ou na
 coordenação da saga.
+
+## Intervalo do polling de pagamento
+
+A [ADR-009](adrs.md#adr-009) definiu o polling do Mercado Pago em vez de
+webhook. Por causa das restrições do ambiente, a regra do EventBridge foi
+implementada com intervalo de 10 minutos, valor escolhido para manter as
+invocações da Lambda e as chamadas ao provedor externo dentro das cotas
+disponíveis no laboratório.
+
+Em uma solução robusta, com fluxo de orders pendentes em volume alto, o
+intervalo adequado seria da ordem de 1 segundo, para que a confirmação do
+Pix fosse percebida quase em tempo real e a saga não permanecesse em
+`PagamentoPendente` por vários minutos. O intervalo é parametrizado no
+Terraform, portanto o ajuste não exige alteração no código da Lambda nem
+na coordenação da saga.
 
 ## Requisitos preservados
 
