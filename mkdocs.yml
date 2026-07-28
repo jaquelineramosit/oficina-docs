@@ -6,44 +6,65 @@ repo_url: https://github.com/jaquelineramosit/oficina-docs
 repo_name: jaquelineramosit/oficina-docs
 edit_uri: edit/main/docs/
 
+copyright: Pós-graduação em Arquitetura de Software — FIAP, Fase 4
+
 theme:
   name: material
   language: pt-BR
+  icon:
+    logo: material/sitemap-outline
+    repo: fontawesome/brands/github
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: teal
       toggle:
         icon: material/weather-night
-        name: Modo escuro
-    - scheme: slate
-      primary: indigo
-      accent: indigo
+        name: Mudar para o modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: teal
       toggle:
         icon: material/weather-sunny
-        name: Modo claro
+        name: Mudar para o modo claro
   features:
     - navigation.instant
+    - navigation.instant.progress
     - navigation.tracking
     - navigation.top
     - navigation.indexes
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.footer
     - toc.follow
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
+    - content.tooltips
     - content.action.edit
 
 nav:
   - Início: index.md
-  - Arquitetura final: 01-arquitetura-final.md
-  - Saga Pattern: 02-saga-pattern.md
-  - Microsserviços e tecnologias: 03-divisao-microsservicos-tecnologias.md
-  - Sequência da criação da OS: 04-sequencia-criacao-os.md
-  - Diagramas ER dos bancos: 05-diagrama-er-bancos.md
-  - RFCs: 06-rfcs.md
-  - ADRs: 07-adrs.md
+  - Arquitetura:
+      - Visão geral: arquitetura/visao-geral.md
+      - Componentes: arquitetura/componentes.md
+      - Microsserviços e tecnologias: arquitetura/microsservicos-tecnologias.md
+      - Comunicação e integração: arquitetura/comunicacao-integracao.md
+  - Fluxos:
+      - Criação da Ordem de Serviço: fluxos/sequencia-criacao-os.md
+      - Saga Pattern: fluxos/saga-pattern.md
+      - Bancos de dados: fluxos/bancos-er.md
+  - Decisões:
+      - ADRs: decisoes/adrs.md
+      - RFCs: decisoes/rfcs.md
+      - Limitações do AWS Academy: decisoes/limitacoes-aws-academy.md
 
 markdown_extensions:
+  - abbr
   - admonition
   - attr_list
   - md_in_html
@@ -51,6 +72,7 @@ markdown_extensions:
   - footnotes
   - toc:
       permalink: true
+      permalink_title: Link permanente para esta seção
       toc_depth: 3
   - pymdownx.details
   - pymdownx.highlight:
@@ -62,6 +84,22 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/diagram-viewer.js
+  - javascripts/mermaid-setup.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jaquelineramosit/oficina-docs
+      name: Repositório da documentação no GitHub
 
 plugins:
   - search:

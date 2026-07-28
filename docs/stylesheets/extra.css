@@ -1,0 +1,657 @@
+/* ==========================================================================
+   Arquitetura da solução Oficina — folha de estilo do site
+   --------------------------------------------------------------------------
+   1. Tokens de cor
+   2. Tokens dos diagramas
+   3. Base e tipografia
+   4. Títulos e hierarquia
+   5. Links, foco e acessibilidade
+   6. Tabelas
+   7. Código
+   8. Blocos de destaque
+   9. Diagramas
+  10. Página inicial
+  11. Responsividade
+  12. Impressão
+   ========================================================================== */
+
+/* 1. Tokens de cor ======================================================== */
+
+:root {
+  --oficina-accent: #00695c;
+  --oficina-accent-soft: rgba(0, 105, 92, 0.1);
+  --oficina-surface: #ffffff;
+  --oficina-surface-muted: #f5f7fa;
+  --oficina-border: #dde4ec;
+  --oficina-border-strong: #c3cedb;
+  --oficina-text-muted: #4e5c6b;
+  --oficina-shadow: 0 1px 2px rgba(24, 34, 46, 0.05);
+  --oficina-radius: 0.4rem;
+}
+
+[data-md-color-scheme="slate"] {
+  --oficina-accent: #64d8cb;
+  --oficina-accent-soft: rgba(100, 216, 203, 0.12);
+  --oficina-surface: #1c242e;
+  --oficina-surface-muted: #171e27;
+  --oficina-border: #2f3b47;
+  --oficina-border-strong: #3e4c5a;
+  --oficina-text-muted: #b0bcc8;
+  --oficina-shadow: none;
+}
+
+/* Cor de destaque coerente com a identidade, nos dois temas. */
+[data-md-color-accent="teal"] {
+  --md-accent-fg-color: var(--oficina-accent);
+}
+
+/* 2. Tokens dos diagramas ================================================= */
+
+/*
+   Os diagramas Mermaid declaram cores fixas em `classDef` e `style`.
+   `mermaid-setup.js` troca cada cor autoral pela variável correspondente antes
+   de inserir o SVG, de modo que o mesmo diagrama se adapta aos dois temas sem
+   ser redesenhado e sem perder a codificação por cor.
+*/
+
+:root {
+  --oficina-dg-canvas: #fbfcfd;
+
+  --oficina-dg-fg: #1f2933;
+
+  --oficina-dg-blue-bg: #e8f1f8;
+  --oficina-dg-blue-line: #3f6075;
+
+  --oficina-dg-teal-bg: #eef4f2;
+  --oficina-dg-teal-line: #00897b;
+
+  --oficina-dg-amber-bg: #fff8e1;
+  --oficina-dg-amber-line: #a06a00;
+  --oficina-dg-amber-fg: #2f2500;
+
+  --oficina-dg-gray-bg: #f4f7fb;
+  --oficina-dg-gray-line: #627282;
+
+  /* Provedor externo e estados finais: tom cheio, com rótulo branco (5,4:1). */
+  --oficina-dg-dark-bg: #546e7a;
+  --oficina-dg-dark-line: #37474f;
+
+  --oficina-dg-amber-surface: #fff9e8;
+  --oficina-dg-amber-border: #e6d4a3;
+  --oficina-dg-teal-surface: #f3faf8;
+  --oficina-dg-teal-border: #b7dcd6;
+  --oficina-dg-gray-surface: #f6f8fb;
+  --oficina-dg-gray-border: #d9e1ea;
+}
+
+[data-md-color-scheme="slate"] {
+  --oficina-dg-canvas: #141b23;
+
+  --oficina-dg-fg: #e4eaf0;
+
+  --oficina-dg-blue-bg: #22303d;
+  --oficina-dg-blue-line: #7ea8c6;
+
+  --oficina-dg-teal-bg: #16302c;
+  --oficina-dg-teal-line: #4db6ac;
+
+  --oficina-dg-amber-bg: #33280f;
+  --oficina-dg-amber-line: #d9a441;
+  --oficina-dg-amber-fg: #f5e6c4;
+
+  --oficina-dg-gray-bg: #232b34;
+  --oficina-dg-gray-line: #8595a4;
+
+  --oficina-dg-dark-bg: #3d525e;
+  --oficina-dg-dark-line: #7d95a2;
+
+  --oficina-dg-amber-surface: #241d0d;
+  --oficina-dg-amber-border: #4a3c1b;
+  --oficina-dg-teal-surface: #102421;
+  --oficina-dg-teal-border: #27453f;
+  --oficina-dg-gray-surface: #1a222b;
+  --oficina-dg-gray-border: #2f3a46;
+}
+
+/* 3. Base e tipografia ==================================================== */
+
+.md-grid {
+  max-width: 72rem;
+}
+
+.md-typeset {
+  font-size: 0.8rem;
+}
+
+.md-typeset p,
+.md-typeset li {
+  line-height: 1.72;
+}
+
+.md-typeset ul,
+.md-typeset ol {
+  margin-left: 0.2rem;
+}
+
+.md-typeset li + li {
+  margin-top: 0.3em;
+}
+
+/* Espaço extra abaixo do conteúdo, antes da navegação anterior/próxima. */
+.md-content__inner {
+  padding-bottom: 1.2rem;
+}
+
+/* Cabeçalho e abas com separação discreta em vez de sombra. */
+.md-header {
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.md-header--shadow {
+  box-shadow: 0 1px 3px rgba(15, 23, 32, 0.18);
+}
+
+.md-tabs {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Item ativo do menu lateral com marcação além da cor. */
+.md-nav__link--active,
+.md-nav__item .md-nav__link--active {
+  font-weight: 700;
+}
+
+.md-nav--secondary .md-nav__link--active {
+  border-left: 2px solid currentcolor;
+  margin-left: -0.62rem;
+  padding-left: 0.5rem;
+}
+
+/* 4. Títulos e hierarquia ================================================= */
+
+.md-typeset h1 {
+  margin-bottom: 0.6rem;
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h2 {
+  margin-top: 2.6rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--oficina-border);
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.md-typeset h3 {
+  margin-top: 1.9rem;
+  color: var(--md-default-fg-color);
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.md-typeset h4 {
+  color: var(--oficina-text-muted);
+  font-weight: 650;
+}
+
+/* 5. Links, foco e acessibilidade ========================================= */
+
+.md-typeset a {
+  text-underline-offset: 0.15em;
+}
+
+:is(a, button, input, summary, .md-nav__link, .md-clipboard):focus-visible {
+  outline: 2px solid var(--oficina-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* 6. Tabelas ============================================================== */
+
+/*
+   O tema já envolve cada tabela em um contêiner com rolagem horizontal
+   (`md-typeset__scrollwrap`). Aqui apenas o acabamento é ajustado, para não
+   competir com esse mecanismo nem provocar rolagem duplicada.
+*/
+.md-typeset table:not([class]) {
+  border: 1px solid var(--oficina-border);
+  border-radius: var(--oficina-radius);
+  box-shadow: none;
+  font-size: 0.72rem;
+}
+
+.md-typeset table:not([class]) th {
+  border-bottom: 1px solid var(--oficina-border-strong);
+  background: var(--oficina-surface-muted);
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+}
+
+.md-typeset table:not([class]) td,
+.md-typeset table:not([class]) th {
+  padding: 0.55rem 0.8rem;
+  vertical-align: top;
+}
+
+.md-typeset table:not([class]) tbody tr {
+  border-top: 1px solid var(--oficina-border);
+  transition: background-color 0.15s ease;
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background: var(--oficina-surface-muted);
+}
+
+/* A primeira coluna funciona como rótulo da linha na maioria das tabelas. */
+.md-typeset table:not([class]) td:first-child {
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+}
+
+/* 7. Código =============================================================== */
+
+.md-typeset code {
+  border-radius: 0.2rem;
+  font-size: 0.85em;
+  word-break: normal;
+}
+
+.md-typeset pre > code {
+  border: 1px solid var(--oficina-border);
+  border-radius: var(--oficina-radius);
+}
+
+.md-typeset .highlight {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* 8. Blocos de destaque =================================================== */
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-width: 1px;
+  border-left-width: 3px;
+  border-radius: var(--oficina-radius);
+  box-shadow: none;
+  font-size: 0.74rem;
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  font-weight: 700;
+}
+
+.md-typeset blockquote {
+  border-left-width: 3px;
+  color: var(--oficina-text-muted);
+}
+
+/* 9. Diagramas ============================================================ */
+
+/*
+   Estrutura montada por `diagram-viewer.js`:
+
+   .oficina-diagram            moldura, borda e barra de controles
+     .oficina-diagram__stage   área rolável
+       .mermaid                elemento do tema, com o SVG em shadow root
+     .oficina-diagram__bar     instrução e controles
+*/
+
+.md-typeset .oficina-diagram {
+  display: flex;
+  flex-direction: column;
+  margin: 1.6rem 0;
+  overflow: hidden;
+  border: 1px solid var(--oficina-border);
+  border-radius: var(--oficina-radius);
+  background: var(--oficina-dg-canvas);
+}
+
+/*
+   No ajuste à largura o diagrama não transborda, então a rolagem da página
+   segue normal sobre ele. A área rolável só existe de fato quando ampliado.
+*/
+.oficina-diagram__stage {
+  padding: 1.1rem;
+  overflow: auto;
+}
+
+.oficina-diagram.is-zoomed .oficina-diagram__stage {
+  max-height: 34rem;
+  cursor: grab;
+}
+
+.oficina-diagram__stage.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.md-typeset .oficina-diagram .mermaid {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.oficina-diagram__bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.55rem 0.4rem 0.9rem;
+  border-top: 1px solid var(--oficina-border);
+  background: var(--oficina-surface-muted);
+}
+
+.md-typeset .oficina-diagram__hint {
+  margin: 0;
+  color: var(--oficina-text-muted);
+  font-size: 0.62rem;
+  line-height: 1.4;
+}
+
+.oficina-diagram__actions {
+  display: flex;
+  gap: 0.15rem;
+  align-items: center;
+  margin-left: auto;
+}
+
+.oficina-diagram__level {
+  min-width: 2.6rem;
+  padding-right: 0.3rem;
+  color: var(--oficina-text-muted);
+  font-size: 0.62rem;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.oficina-diagram__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  background: none;
+  color: var(--oficina-text-muted);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.oficina-diagram__button:hover {
+  border-color: var(--oficina-border-strong);
+  background: var(--oficina-surface);
+  color: var(--md-default-fg-color);
+}
+
+.oficina-diagram.is-fullscreen {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.oficina-diagram.is-fullscreen .oficina-diagram__stage {
+  flex: 1;
+  max-height: none;
+}
+
+/* 10. Página inicial ====================================================== */
+
+.oficina-hero {
+  margin: 0 0 1.6rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--oficina-border);
+}
+
+.md-typeset .oficina-hero h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* O permalink não acrescenta nada no título de abertura. */
+.oficina-hero h1 .headerlink {
+  display: none;
+}
+
+.md-typeset .oficina-eyebrow {
+  margin: 0 0 0.45rem;
+  color: var(--oficina-accent);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.md-typeset .oficina-lead {
+  max-width: 44rem;
+  margin: 0;
+  color: var(--oficina-text-muted);
+  font-size: 0.88rem;
+  line-height: 1.62;
+}
+
+.oficina-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 1.1rem;
+}
+
+.oficina-pill-row span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--oficina-border);
+  border-radius: 999px;
+  background: var(--oficina-accent-soft);
+  color: var(--md-default-fg-color);
+  font-size: 0.64rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.oficina-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(14rem, 0.7fr);
+  gap: 1rem;
+  align-items: start;
+  margin: 1.6rem 0;
+}
+
+.oficina-panel {
+  height: 100%;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--oficina-border);
+  border-radius: var(--oficina-radius);
+  background: var(--oficina-surface);
+}
+
+.md-typeset .oficina-panel h2,
+.md-typeset .oficina-card h3,
+.md-typeset .oficina-component-card h3 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+  font-size: 0.84rem;
+}
+
+.md-typeset .oficina-panel p:last-child {
+  margin-bottom: 0;
+}
+
+/* Roteiro de leitura no painel lateral da página inicial. */
+.md-typeset .oficina-panel ol {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.72rem;
+}
+
+.md-typeset .oficina-panel ol li {
+  margin: 0 0 0.3rem;
+  line-height: 1.45;
+}
+
+.md-typeset .oficina-panel ol li:last-child {
+  margin-bottom: 0;
+}
+
+.oficina-nav-grid,
+.oficina-component-grid {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1.2rem 0 1.6rem;
+}
+
+.oficina-nav-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.oficina-component-grid {
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.oficina-card,
+.oficina-component-card {
+  border: 1px solid var(--oficina-border);
+  border-radius: var(--oficina-radius);
+  background: var(--oficina-surface);
+}
+
+/* Cartão de navegação: toda a área é clicável. */
+.md-typeset a.oficina-card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.9rem;
+  padding: 1rem 1.1rem;
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.md-typeset a.oficina-card:hover,
+.md-typeset a.oficina-card:focus-visible {
+  border-color: var(--oficina-accent);
+  background: var(--oficina-surface-muted);
+}
+
+.md-typeset .oficina-card p,
+.md-typeset .oficina-component-card p {
+  margin: 0;
+  color: var(--oficina-text-muted);
+  font-size: 0.72rem;
+  line-height: 1.55;
+}
+
+.oficina-card__action {
+  color: var(--oficina-accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.oficina-card__action::after {
+  content: " →";
+}
+
+.oficina-component-card {
+  padding: 0.9rem 1rem;
+}
+
+/* Nomes de repositório não quebram no hífen; a tabela rola se precisar. */
+.md-typeset .oficina-repos td:first-child code {
+  white-space: nowrap;
+}
+
+.md-typeset .oficina-component-card h3 {
+  margin-bottom: 0.3rem;
+  font-size: 0.78rem;
+}
+
+.md-typeset .oficina-component-card strong {
+  color: var(--md-default-fg-color);
+}
+
+/* 11. Responsividade ====================================================== */
+
+@media screen and (max-width: 76.2344em) {
+  .md-grid {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 59.9844em) {
+  .oficina-nav-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 44.9844em) {
+  .md-typeset {
+    font-size: 0.78rem;
+  }
+
+  .md-typeset h2 {
+    margin-top: 2rem;
+  }
+
+  .oficina-summary,
+  .oficina-nav-grid,
+  .oficina-component-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .md-typeset .oficina-lead {
+    font-size: 0.82rem;
+  }
+
+  .oficina-diagram__stage {
+    padding: 0.7rem;
+  }
+
+  .oficina-diagram.is-zoomed .oficina-diagram__stage {
+    max-height: 22rem;
+  }
+
+  .md-typeset .oficina-diagram__hint {
+    display: none;
+  }
+
+  .oficina-diagram__actions {
+    width: 100%;
+  }
+}
+
+/* 12. Impressão =========================================================== */
+
+@media print {
+  .oficina-diagram__bar {
+    display: none;
+  }
+
+  .oficina-diagram__stage {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .md-typeset .oficina-diagram {
+    break-inside: avoid;
+  }
+}
